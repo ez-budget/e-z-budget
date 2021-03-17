@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+}
+  
+/* main CSS begins */
+body, html {
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    color: #333;
+}
+a{
+    text-decoration: none;
+    color: #2d7006;
+    font-weight: bold;
+}
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+button {
+    color: #fff !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #2d7006;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    transition: all 0.4s ease 0s;
+}
+
+button:hover {
+    background: #434343;
+    letter-spacing: 0.5px;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.4s ease 0s;
+}
+
+header {
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1%;
+    height: 60px;
+    background-color: #76f729;
+    position: absolute;
+    width: 100%;
+}
+
+
+
+header h1 {
+    font-size: 1em;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    width: 120px;
+}
+
+
+main{
+    display: flex;
+    top: 40px;
+    bottom: 40px;
+}
+
+footer{
+    height: 91px;
+    background-color: red;
+}
+
+/* main css ends */
+
+/* splash page style begins */
+.login-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin-top: 31%;
+    margin-bottom: 30.9%;
+}
+
+.login-form{
+    width: 450px;
+}
+
+/* splash page style ends */
