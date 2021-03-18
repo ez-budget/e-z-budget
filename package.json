@@ -1,0 +1,22 @@
+{
+  "name": "e-z-budget",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node server.js",
+    "seed": "node seeds/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ez-budget/e-z-budget.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ez-budget/e-z-budget/issues"
+  },
+  "homepage": "https://github.com/ez-budget/e-z-budget#readme"
+}
