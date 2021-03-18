@@ -24,7 +24,7 @@ a{
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-}
+} 
 
 button {
     color: #fff !important;
@@ -54,7 +54,6 @@ header {
     padding: 0 1%;
     height: 60px;
     background-color: #76f729;
-    position: absolute;
     width: 100%;
 }
 
@@ -75,7 +74,9 @@ main{
     display: flex;
     top: 40px;
     bottom: 40px;
+
 }
+
 
 footer{
     height: 91px;
@@ -85,7 +86,20 @@ footer{
 /* main css ends */
 
 /* splash page style begins */
+
+.main-wrapper{
+    
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-image: url(../images/FarmTwo.gif);
+    background-size: 100% 100%;
+    object-fit: fill;
+    background-repeat: no-repeat;
+}
+
 .login-container{
+    
     width: 100%;
     display: flex;
     align-items: center;
@@ -93,6 +107,7 @@ footer{
     height: 100%;
     margin-top: 31%;
     margin-bottom: 30.9%;
+    
 }
 
 .login-form{
