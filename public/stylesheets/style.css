@@ -1,0 +1,12 @@
+nav{
+   background-color: red; 
+}
+header a img{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+.jumbotron-background{
+    background-image: url(../assets/images/money-growing.jpg);
+}
+
