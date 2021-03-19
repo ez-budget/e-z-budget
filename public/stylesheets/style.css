@@ -6,7 +6,19 @@ header a img{
     height: 50px;
     width: 50px;
 }
+/* homepage */
 .jumbotron-background{
     background-image: url(../assets/images/money-growing.jpg);
 }
 
+/* login page */
+.login-header{
+    display: flex;
+    justify-content: center;
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
