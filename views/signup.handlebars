@@ -1,0 +1,59 @@
+<header>
+    <nav class="navbar navbar-expand-sm fixed-top">
+        <a class="navbar-brand" href="/"> <img src="/public/assets/images/logo_header.jpg" alt="logo"> </a>
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link" href="#about-us">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#faq">FAQ</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+            </li>
+            {{#if loggedIn}}
+            <li class="nav-item">
+                <a class="nav-link" href="/dashboard">Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link" id="logout">Logout</button>
+            </li>
+            {{else}}
+            <li class="nav-item">
+                <a class="nav-link" href="/login">Login</a>
+            </li>
+            {{/if}}
+        </ul>
+
+    </nav>
+
+</header>
+<div class="card">
+    <div class="card-header">
+        <h2>Sign Up</h2>
+    </div>
+    <div id="signup" role="tabpanel">
+        <form id="signup-form" class="card-body">
+            <div>
+                <label for="username-input-signup">Username</label>
+                <input type="text" id="username-input-signup" />
+            </div>
+            <div>
+                <label for="email-input-login" class="form-label">Email Address</label>
+                <input type="text" id="email-input-login" />
+            </div>
+            <div>
+                <label for="password-input-signup">Password</label>
+                <input type="password" id="password-input-signup" />
+            </div>
+            <button type="submit" id="signup-btn" class="btn">Signup</button>
+            <a href="/login">Login</a>
+        </form>
+    </div>
+</div>
+
+<script src="/javascript/signup.js"></script>
+
+{{#if loggedIn}}
+<script src="/javascript/logout.js"></script>
+{{/if}}
