@@ -35,7 +35,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // app.use(require('./controllers/'));
 
 app.get('/', (req, res) => {
-  res.render('homepage');
+  res.render('login');
 })
 
 app.listen(3000, () => {
