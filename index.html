@@ -23,9 +23,10 @@
       <!--add income-->
       <hr>
       <div id="flex">
-        <div class="budget">
-          <h2>Total Budget: <span id="totalBudget">0</span></h2>
-          <h2>Current Balance: <span id="currentBalance">0</span></h2>
+        <div class="column">
+          <div class="row justify-content-around">
+              <div class="col-sm-3 column">
+              <div>         
 
           <br><h2>Add income</h2>
           <input type="text" placeholder="income name" id="incomeName"><br><br>
@@ -38,6 +39,8 @@
         </div>
       </div>
         <!--add expenses-->
+        <div class="row justify-content-around">
+          <div class="col-sm-12 column">
          <br><br> 
           <h2>Add expenses</h2>
           <input type="text" placeholder="expense name" id="expenseName"><br><br>
@@ -50,6 +53,12 @@
         </div>
       </div>
     </div>
+    <div class="row justify-content-around">
+      <div class="col-sm-12 column">
+      <br><br>     
+          <h2>Total Budget: <span id="totalBudget">0</span></h2>
+          <h2>Current Balance: <span id="currentBalance">0</span></h2>
+  </div>
       <script src="public/javascript/createbudget.js"></script>
     </body>
 </html>
