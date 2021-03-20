@@ -5,31 +5,72 @@
             <li class="nav-item">
                 <a class="nav-link" href="/">Home</a>
             </li>
+            {{#if loggedIn}}
             <li class="nav-item">
                 <a class="nav-link" href="/dashboard">Dashboard</a>
             </li>
             <li class="nav-item">
                 <button class="nav-link" id="logout">Logout</button>
             </li>
+            {{else}}
+            <li class="nav-item">
+                <a class="nav-link" href="/login">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/signup">Sign up</a>
+            </li>
+            {{/if}}
         </ul>
     </nav>
 </header>
 
 <main>
-    {{> post-details post}}
-
-    {{#if loggedIn}}
-    <form action="" class="comment-form">
-        <div class="form-group">
-            <label for="exampleFormControlTextarea1">Add Comments</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"
-                name="comment-body"></textarea>
+    <div class="container-fluid">
+        <div>
+            {{#if loggedIn}}
+            <p>Hello Insider!</p>
+            {{else}}
+            <p>Please signup to become a user and start budgeting</p>
+            {{/if}}
         </div>
-        <button type="submit" class="btn btn-outline-success">Submit</button>
-    </form>
-    {{/if}}
-
-    {{> comments post.comments}}
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 col-md-6 col-lg-4">
+                    <h2>Some Cool Stuffs</h2>
+                    {{> story-list post}}
+                </div>
+                <div class="col-sm-9 col-md-6 col-lg-8">
+                    <div class="col-12">
+                        <h2></h2>
+                        <div>
+                            {{> story-details post}}
+                        </div>
+                    </div>
+                    <div id="about-us" class="col-12">
+                        <h2></h2>
+                        <div>
+                            {{> comments post.comments}}
+                        </div>
+                    </div>
+                    <div id="faq" class="col-12">
+                        <h2></h2>
+                        <div>
+                            {{#if loggedIn}}
+                            <form action="" class="comment-form">
+                                <div class="form-group">
+                                    <label for="exampleFormControlTextarea1">Add Comments</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"
+                                        name="comment-body"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-outline-success">Submit</button>
+                            </form>
+                            {{/if}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
 </main>
 
 {{#if loggedIn}}
