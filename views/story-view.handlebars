@@ -30,8 +30,8 @@
     {{/if}}
 
     {{> comments post.comments}}
-
-    {{#if loggedIn}}
-    <script src="/javascript/comment.js"></script>
-    {{/if}}
 </main>
+
+{{#if loggedIn}}
+<script src="/javascript/comment.js"></script>
+{{/if}}
