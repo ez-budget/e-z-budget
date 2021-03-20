@@ -1,0 +1,37 @@
+<header>
+    <nav class="navbar navbar-expand-sm fixed-top">
+        <a class="navbar-brand" href="/"> <img src="/public/assets/images/logo_header.jpg" alt="logo"> </a>
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/dashboard">Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link" id="logout">Logout</button>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    {{> post-details post}}
+
+    {{#if loggedIn}}
+    <form action="" class="comment-form">
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Add Comments</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"
+                name="comment-body"></textarea>
+        </div>
+        <button type="submit" class="btn btn-outline-success">Submit</button>
+    </form>
+    {{/if}}
+
+    {{> comments post.comments}}
+
+    {{#if loggedIn}}
+    <script src="/javascript/comment.js"></script>
+    {{/if}}
+</main>
