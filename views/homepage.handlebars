@@ -1,8 +1,10 @@
 <header>
+
     <nav class="navbar navbar-expand-sm fixed-top">
         <a class="navbar-brand" href="/"> <img src="/public/assets/images/logo_header.gif" alt="logo"> </a>
         <ul class="nav justify-content-end">
             <li class="nav-item">
+
                 <a class="nav-link" href="#about-us">About Us</a>
             </li>
             <li class="nav-item">
@@ -31,9 +33,17 @@
     </nav>
 </header>
 
-<main>
+<main role="main">
+
+    <div class="jumbotron jumbotron-background">
+        <div class="container">
+            <h1 class="display-3">E-Z-Budget</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus accusamus tempore eos hic ab sunt illo, debitis, dolor neque sed asperiores ducimus. Commodi, fuga voluptates? Saepe fugiat tempora quis praesentium.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur doloremque voluptatibus perspiciatis, rem, aspernatur libero laborum praesentium dignissimos qui earum hic quam ut placeat! Reiciendis?</p>
+        </div>
+    </div>
     <div class="container-fluid">
-        <div>
+        <div class="d-flex justify-content-center">
             {{#if loggedIn}}
             <p>Hello Insider!</p>
             {{else}}
@@ -41,12 +51,15 @@
             {{/if}}
         </div>
         <div class="container">
-            <div class="row">
-                <div class="col-sm-3 col-md-6 col-lg-4">
-                    <h2>Some Cool Stuffs</h2>
-                    {{> story-list post}}
+
+            <div class="row justify-content-around">
+                <div class="col-sm-3 column">
+                    <h2> Some Cool Stuffs</h2>
+                    <a href=""></a>
+                    <a href=""></a>
+
                 </div>
-                <div class="col-sm-9 col-md-6 col-lg-8">
+                <div class="col-lg-8 column">
                     <div class="col-12">
                         <h2>What is e-z-Budget?</h2>
                         <div>
