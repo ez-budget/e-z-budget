@@ -3,10 +3,13 @@ body{
 }
 nav{
    background-color: #426D49; 
+
 }
 
 header{
-    background-color: #426D49;
+    background-color: #426D49;   
+    display: flex;
+    justify-content: space-between;
 }
 
 header a img{
