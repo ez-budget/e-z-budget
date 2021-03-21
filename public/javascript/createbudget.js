@@ -20,7 +20,7 @@ function addMoney() {
     var para = document.createElement ('p');
     para.innerHTML = `Income Name: ${incomeName} <br> Income Amount: ${incomeAmount}`;
     document.getElementById("addedMoney").appendChild(para);
-    
+    console.log(incomeAmount);
   };
   
   //add expenses

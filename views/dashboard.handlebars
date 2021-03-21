@@ -1,3 +1,4 @@
+
 <header>
   <h1>Welcome to your Dashboard!</h1>
   <nav>
@@ -25,15 +26,19 @@
         <h2>Current Balance:<br> <span id="currentBalance">0</span></h2>
       </div>
 
-      <!--<ul class="budget-list list-group">
-        {{#each budgets as |budget|}}
-        <li class="list-group-item">
-          {{> story-info budget }}
-        </li>
-        {{/each}}
-      </ul>-->
+    <!--  <div class="container">
+  {{#each this}}
+  <section class="comment">
+    <div class="meta">
+      {{totalBudget}} | {{format_date created_at}}
+    </div>
+    <div class="text">
+      {{currentBalance}}
+    </div>
+  </section>
+  {{/each}}
+</div>-->
 
 
-
-
+      <script src="/login.js"></script>
       <script src="/javascript/createbudget.js"></script>
