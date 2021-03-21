@@ -2,8 +2,13 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 nav{
-   background-color: red; 
+   background-color: #426D49; 
 }
+
+header{
+    background-color: #426D49;
+}
+
 header a img{
     border-radius: 50%;
     height: 50px;
