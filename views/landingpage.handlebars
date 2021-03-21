@@ -1,0 +1,55 @@
+<header>
+    <nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-dark">
+        <a class="navbar-brand" href="/"> E-Z-Budget </a>
+        <ul class="navbar-nav mr-auto">
+            {{!-- <li class="nav-item active">
+                <a class="nav-link" href="#about-us">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#faq">FAQ</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+            </li> --}}
+            {{#if loggedIn}}
+            <li class="nav-item">
+                <a class="nav-link" href="/dashboard">Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link" id="logout">Logout</button>
+            </li>
+            {{else}}
+            <li class="nav-item">
+                <a class="nav-link" href="/login">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/signup">Sign up</a>
+            </li>
+            {{/if}}
+        </ul>
+
+    </nav>
+</header>
+
+
+<main>
+    <div class = "main-wrapper">
+        <div class="login-container">
+            <p>Introducing E-Z-Budget</p>
+            <div class="login-image-container">
+                <img src="../assets/images/Logo_animated.gif"/>
+            </div>
+            <form class="login-form">
+                <div>
+                
+                <input type="text" id="email-login" placeholder="Email Address"/>
+                
+                <input type="password" id="password-login" placeholder="Password"/>
+                
+                <button type="submit">login</button>
+
+                </div>   
+            </form>
+        </div>
+    </div>
+</main>

@@ -3,28 +3,30 @@ const sequelize = require('../config/connection');
 
 class Budget extends Model {}
 
-budget.init(
+Budget.init(
   {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true
+
+
     },
-    income: {
+       budget_title: { 
+         type: DataTypes.STRING,
+        allowNull: false
+    }, 
+
+      user_id: {
       type: DataTypes.INTEGER,
-      allowNull: false
-    },
-    expenses: {
-      type: DataTypes.INTEGER,
-      allowNull: false
-    },
-    balance: {
-      type: DataTypes.INTEGER,
-      allowNull: false
+      references: {
+        model: 'user',
+        key: 'id'
       }
-    
+    }     
   },
+  
   {
     sequelize,
     freezeTableName: true,
