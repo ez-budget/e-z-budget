@@ -1,6 +1,6 @@
 <header>
     <nav class="navbar navbar-expand-sm fixed-top">
-        <a class="navbar-brand" href="/"> <img src="/public/assets/images/logo_header.jpg" alt="logo"> </a>
+        <a class="navbar-brand" href="/"> <img src="/public/assets/images/logo_header.gif" alt="logo"> </a>
         <ul class="nav justify-content-end">
             <li class="nav-item">
                 <a class="nav-link" href="/">Home</a>
@@ -23,7 +23,7 @@
 
             </div>
             <div class="col-sm-10 col-md-8 col-lg-4">
-                <form action="" class="edit-post-form">
+                <form action="" class="">
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Story Title</label>
                         <input type="text" class="form-control" id="exampleFormControlInput1" name="post-title"
@@ -34,7 +34,7 @@
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"
                             name="post-body">{{post.story_body}}</textarea>
                     </div>
-                    <button type="button" class="btn btn-outline-success">Save</button>
+                    <button type="button" class="btn btn-outline-success edit-post-form">Save</button>
                     <button type="button" class="btn btn-outline-danger delete-post-btn">Delete</button>
                 </form>
             </div>
@@ -43,14 +43,6 @@
                     <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment"
                         post.comments.length}}</a>
                 </div>
-                <form action="" class="comment-form">
-                    <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Add Comments</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"
-                            name="comment-body"></textarea>
-                    </div>
-                    <button type="button" class="btn btn-outline-success">Submit</button>
-                </form>
                 {{> comments post.comments}}
             </div>
         </div>
@@ -59,4 +51,3 @@
 
 <script src="/javascript/edit-story.js"></script>
 <script src="/javascript/delete-story.js"></script>
-<script src="/javascript/comment.js"></script>
