@@ -1,10 +1,18 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+<<<<<<< HEAD
 // create Story model
 class Story extends Model {}
 
 // create fields/columns for Story model
 Story.init(
+=======
+// create Post model
+class Post extends Model {}
+
+// create fields/columns for Post model
+Post.init(
+>>>>>>> 3892fc2d35ef83d6317044723d400590d3152f52
   {
     id: {
       type: DataTypes.INTEGER,
@@ -35,8 +43,16 @@ Story.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
+<<<<<<< HEAD
     modelName: 'story'
   }
 );
 
 module.exports = Story;
+=======
+    modelName: 'post'
+  }
+);
+
+module.exports = Post;
+>>>>>>> 3892fc2d35ef83d6317044723d400590d3152f52

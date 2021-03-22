@@ -70,11 +70,19 @@ router.post('/', (req, res) => {
       res.status(500).json(err);
     });
 });
+<<<<<<< HEAD
 
+=======
+//var session_username = "";
+>>>>>>> 3892fc2d35ef83d6317044723d400590d3152f52
 // user login
 router.post('/login', (req, res) => {
   // expects {email: , password: }
   User.findOne({
+<<<<<<< HEAD
+=======
+    //attributes: ['id', 'username'],
+>>>>>>> 3892fc2d35ef83d6317044723d400590d3152f52
     where: {
       email: req.body.email
     }
@@ -85,6 +93,10 @@ router.post('/login', (req, res) => {
     }
 
     const validPassword = dbUserData.checkPassword(req.body.password);
+<<<<<<< HEAD
+=======
+    //session_username = dbUserData.username;
+>>>>>>> 3892fc2d35ef83d6317044723d400590d3152f52
 
     if (!validPassword) {
       res.status(400).json({ message: 'Incorrect password!' });
@@ -157,4 +169,8 @@ router.delete('/:id', (req, res) => {
     });
 });
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3892fc2d35ef83d6317044723d400590d3152f52
 module.exports = router;
