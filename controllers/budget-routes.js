@@ -7,7 +7,16 @@ const withAuth = require('../utils/auth.js');
 router.get('/budget', (req, res) => {
     Budget.findAll({
         attributes: [
-            ' id', 'budget_title']
+            'id', 
+            'budget_title', 
+            'incomeName', 
+            'incomeAmount', 
+            'expenseName', 
+            'expenseAmount',
+            'total_budget',
+            'current_balance',
+            $sql ="INSERT INTO budget (id, budget_title, incomeName, incomeAmount, expenseName, expenseAmount, total_budget, current_balance) VALUES  ('$id', '$budget_title', '$incomeName', '$incomeAmount', '$expenseName', '$expenseAmount', '$total_budget', '$current_balance')"
+        ]
     })
         .then(dbBudgetData => res.json(dbBudgetData))
         .catch(err => {
@@ -15,10 +24,11 @@ router.get('/budget', (req, res) => {
             res.status(500).json(err);
         });
 })
+/*
 router.get('/budget/:id', (req, res) => {
     Budget.findOne({
         attributes: [
-            ' id', 'budget_title']
+            'id', 'budget_title', 'incomeName', 'incomeAmount', 'expenseName', 'expenseAmount']
     })
         .then(dbBudgetData => {
             if (!dbBudgetData) {
@@ -31,12 +41,18 @@ router.get('/budget/:id', (req, res) => {
             console.log(err);
             res.status(500).json(err);
         });
-});
+});*/
 // create budget
 router.post('/', withAuth, (req, res) => {
     Budget.create({
         budget_title: req.body.budget_title,
-        user_id: req.session.user_id
+        user_id: req.session.user_id,
+        incomeName: req.session.incomeName,
+        incomeAmount: req.session.incomeAmount,
+        expenseName: req.session.expenseName,
+        expenseAmount: req.session.expenseAmount,
+        total_budget: req.session.total_budget,
+        current_balance: req.session.current_balance
     })
         .then(dbBudgetData => res.json(dbBudgetData))
         .catch(err => {
@@ -48,8 +64,14 @@ router.post('/', withAuth, (req, res) => {
 router.put('/:id', withAuth, (req, res) => {
     Budget.update(
         {
-            budget_title: req.body.budget_title  
-          },
+            budget_title: req.body.budget_title,
+            incomeName: req.session.incomeName,
+            incomeAmount: req.session.incomeAmount,
+            expenseName: req.session.expenseName,
+            expenseAmount: req.session.expenseAmount,
+            total_budget: req.session.total_budget,
+            current_balance: req.session.current_balance
+        },
         {
             where: {
                 id: req.params.id
