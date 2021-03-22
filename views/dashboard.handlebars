@@ -6,7 +6,7 @@
                 <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="">Create a budget</a>
+                <a class="nav-link" href="/dashboard/addbudget">Create a budget</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/dashboard/addstory">Share My Story</a>
@@ -44,6 +44,20 @@
                 <div class="col-sm-9 col-md-6 col-lg-8">
                     <!-- budget lists -->
                     <h2>My Budgets</h2>
+                    {{#if budgets.length}}
+                    <section>
+                    <ol>
+                        {{#each budgets as |budget|}}
+                        <li>
+                        {{> budget-info budget}}
+                        <a href="/dashboard/edit/{{budget.id}}" class="edit-link">Edit</a>
+                        </li>
+                        {{/each}}
+                    </ol>
+                    </section>
+                    {{else}}
+                    <p>No budgets created!</p>
+                    {{/if}}
                 </div>
             </div>
         </div>
