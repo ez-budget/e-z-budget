@@ -14,7 +14,12 @@ function addMoney() {
       document.getElementById("totalBudget").value = totalBudget;
       document.getElementById("currentBalance").value = currentBalance;
     } 
-    //display income      
+    //display income   
+    
+    let incomeName = document.getElementById('incomeName').value;
+    let incomeAmount = parseInt(document.getElementById('incomeAmount').value);
+
+
     let para = document.createElement ('p');
     para.value = `Income Name: ${incomeName} <br> Income Amount: ${incomeAmount}`;
     document.getElementById("addedMoney").appendChild(para);
@@ -29,13 +34,13 @@ function addMoney() {
     if (expenseName.length == " ") {
       alert("Please enter an expense name");
     }
-    else if (expenseAmount == " " || isNaN(expenseAmount)) {
+    else if (expenseAmount == "" || isNaN(expenseAmount)) {
       alert("Please enter a valid expense amount");
     }
     else if (expenseAmount <= currentBalance) {
      currentBalance -= expenseAmount;
      document.getElementById('currentBalance').value = currentBalance;
-     
+
      let para = document.createElement ('p')
      para.value = `Expense Name: ${expenseName} <br> Expense Amount: ${expenseAmount}`;
      document.getElementById("addedExpenses").appendChild(para);
@@ -51,7 +56,7 @@ function addMoney() {
     if (expenseName.length == " ") {
       alert("Please enter an expense name");
     }
-    else if (expenseAmount == " " || isNaN(expenseAmount)){
+    else if (expenseAmount == "" || isNaN(expenseAmount)){
       alert("Please enter a valid amount");
     }
     else if (expenseAmount <= currentBalance) {

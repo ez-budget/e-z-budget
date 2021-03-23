@@ -13,7 +13,9 @@ router.get('/budget', (req, res) => {
             'incomeAmount', 
             'expenseName', 
             'expenseAmount',
-            $sql ="INSERT INTO budget (id, budget_title, incomeName, incomeAmount, expenseName, expenseAmount) VALUES  ('$id', '$budget_title', '$incomeName', '$incomeAmount', '$expenseName', '$expenseAmount')"
+            'totalIncome',
+            'currentBalance',
+            $sql ="INSERT INTO budget (id, budget_title, incomeName, incomeAmount, expenseName, expenseAmount, totalIncome, currentBalance) VALUES ('$id', '$budget_title', '$incomeName', '$incomeAmount', '$expenseName', '$expenseAmount', '$totalIncome', '$currentBalance')"
         ]
     })
         .then(dbBudgetData => res.json(dbBudgetData))
@@ -47,7 +49,9 @@ router.post('/', withAuth, (req, res) => {
         incomeName: req.session.incomeName,
         incomeAmount: req.session.incomeAmount,
         expenseName: req.session.expenseName,
-        expenseAmount: req.session.expenseAmount
+        expenseAmount: req.session.expenseAmount,
+        totalIncome: req.session.totalIncome,
+        currentBalance: req.session.currentBalance
     })
         .then(dbBudgetData => res.json(dbBudgetData))
         .catch(err => {
@@ -60,10 +64,13 @@ router.put('/:id', withAuth, (req, res) => {
     Budget.update(
         {
             budget_title: req.body.budget_title,
+            user_id: req.session.user_id,
             incomeName: req.session.incomeName,
             incomeAmount: req.session.incomeAmount,
             expenseName: req.session.expenseName,
-            expenseAmount: req.session.expenseAmount
+            expenseAmount: req.session.expenseAmount,
+            totalIncome: req.session.totalIncome,
+            currentBalance: req.session.currentBalance
         },
         {
             where: {
