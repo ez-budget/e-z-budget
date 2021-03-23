@@ -21,7 +21,7 @@ Budget.init(
       }
       
     },
-   /* incomeName: {
+  /*  incomeName: {
       type: DataTypes.STRING,
       allowNull: false
     },

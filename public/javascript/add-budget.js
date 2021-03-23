@@ -6,7 +6,8 @@ async function newBudgetFormHandler(event) {
     const response = await fetch(`/api/budgets`, {
       method: 'POST',
       body: JSON.stringify({
-        budget_title
+        budget_title,
+        
       }),
       headers: {
         'Content-Type': 'application/json'

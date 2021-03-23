@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Budget } = require('../../models');
+const { User, Budget, Finance } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // get all budgets
@@ -47,7 +47,7 @@ router.get('/:id', (req, res) => {
     ],
     include: 
     [
-      {
+      /*{
         model: Finance,
         attributes: ['id', 'income_source', 'income_receipt', 'income_remark',
          'expense_item', 'expense_payment', 'expense_comment'],
@@ -55,7 +55,7 @@ router.get('/:id', (req, res) => {
           model: Budget,
           attributes: ['id','budget_title']
         }
-      }, 
+      }, */
       {
         model: User,
         attributes: ['id', 'username']
