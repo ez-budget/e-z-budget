@@ -1,0 +1,201 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: #426D49;
+}
+
+header a{
+    color:#aaaaaa;
+}
+
+header a img{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+nav{
+   display: flex;
+   justify-content: space-between;
+}
+
+main{
+    margin-bottom: 60px;
+}
+
+button {
+    /* display: block; */
+    cursor: pointer;
+    /* outline: none; */
+    /* border: none; */
+    background-color: #92DE34;
+    /* width: 100px;
+    height: 70px; */
+    border-radius: 30px;
+    /* font-size: 1.5rem; */
+    font-weight: 600;
+    color: #025600;
+    background-size: 100% 100%;
+    /* box-shadow: 0 0 0 7px #92DE34 inset; */
+    /* margin-bottom: 15px; */
+  }
+  
+  button:hover {
+    background-color: #3e8f4b;
+    animation: background 3s linear infinite;
+  }
+
+
+/* landing page */
+
+.header-text-color a{
+    color: #426D49; 
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.header-text-color a:hover{
+    color:#aaaaaa;
+}
+
+.main-wrapper{
+    
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-image: url(../assets/images/money-growing.jpg);
+    /* background-size: 100% 100%; */
+    object-fit:contain;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.login-container{
+    
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    /* margin-top: 31%;
+    margin-bottom: 30.9%; */
+    
+}
+
+.login-image-container{
+
+    height: 150px;  
+    width: 150px;
+    border: 2px solid black;
+    margin-top: 2px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+
+}
+
+.login-image-container img{
+    max-width: 100%;
+    max-height: 100%;
+    display: block; /* remove extra space below image */
+    border-radius: 50%;
+}
+
+/* landing page ends */
+
+/* homepage */
+.jumbotron-background{
+    background-image: url(../assets/images/money-growing.jpg);
+}
+
+.columns-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+.column{
+    background-color: #426D49;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid black; 
+    width: 100%;
+    /* margin: 20px;*/
+}
+
+
+
+/* hompage ends */
+
+/* login page */
+.login-header{
+    display: flex;
+    justify-content: center;
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* login page styling ends */
+
+/* signup page syling begins*/
+
+.signup-main{
+    position: relative;
+    display: flex;
+    flex: 1 1 auto;
+}
+
+/* .signup-background{
+    position: absolute;
+    padding:0;
+    margin:0;
+
+    top:0;
+    left:0;
+
+    width: 100%;
+    height: 100%;
+    background:rgba(255,255,255,0.5);
+} */
+
+/* signup page ends */
+
+/*edit-story styling begins*/
+
+.edit-story-container{
+    background-color: #426D49;
+    margin-top: 30px;
+    padding: 20px;
+    box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+
+}
+
+
+
+/* edit-story styling end*/
+
+/* footer */
+
+footer{
+    clear: both;
+    border: 1px groove #aaaaaa;
+    color: White;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+    line-height: normal;
+    margin: 0;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background-color: #426D49;
+}
