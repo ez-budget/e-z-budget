@@ -1,72 +1,68 @@
-// add income
 function addMoney() {
-    let totalBudget = parseInt(document.getElementById("totalBudget").value);
-    let currentBalance = parseInt(document.getElementById("currentBalance").value);
-    let incomeName = document.getElementById('incomeName').value;
-    let incomeAmount = parseInt(document.getElementById('incomeAmount').value);
-
-    if (incomeAmount == "" || isNaN(incomeAmount)) {
-      alert("Please enter a valid number");
-    }
-    else {
-      totalBudget += incomeAmount;
-      currentBalance += incomeAmount;
-      document.getElementById("totalBudget").value = totalBudget;
-      document.getElementById("currentBalance").value = currentBalance;
-    } 
-    //display income   
-    
-    let incomeName = document.getElementById('incomeName').value;
-    let incomeAmount = parseInt(document.getElementById('incomeAmount').value);
-
-
-    let para = document.createElement ('p');
-    para.value = `Income Name: ${incomeName} <br> Income Amount: ${incomeAmount}`;
-    document.getElementById("addedMoney").appendChild(para);
-    console.log(incomeAmount, incomeName);
-    };
-  
-  //add expenses
-    function addExpense() {
-    let currentBalance = parseInt(document.getElementById("currentBalance").value);
-    let expenseName = document.getElementById('expenseName').value;
-    let expenseAmount = parseInt(document.getElementById('expenseAmount').value);
-    if (expenseName.length == " ") {
-      alert("Please enter an expense name");
-    }
-    else if (expenseAmount == "" || isNaN(expenseAmount)) {
-      alert("Please enter a valid expense amount");
-    }
-    else if (expenseAmount <= currentBalance) {
-     currentBalance -= expenseAmount;
-     document.getElementById('currentBalance').value = currentBalance;
-
-     let para = document.createElement ('p')
-     para.value = `Expense Name: ${expenseName} <br> Expense Amount: ${expenseAmount}`;
-     document.getElementById("addedExpenses").appendChild(para);
-   }  
-   else
-    alert("Sorry your expense amount is higher thatn your current balance");
+  var totalBudget = parseInt(document.getElementById("totalBudget").innerHTML);
+  var currentBalance = parseInt(document.getElementById("currentBalance").innerHTML);
+  var incomeAmount = parseInt(document.getElementById('incomeAmount').value);
+  if (incomeAmount == " " || isNaN(incomeAmount)) {
+    alert("Please enter a valid number");
   }
-  //display added expenses
-  function addedExpense() {
-    let currentBalance = parseInt(document.getElementById("currentBalance").value);
-    let expenseName = document.getElementById("expenseName").value;
-    let expenseAmount = parseInt(document.getElementById('expnseAmount').value);
-    if (expenseName.length == " ") {
-      alert("Please enter an expense name");
-    }
-    else if (expenseAmount == "" || isNaN(expenseAmount)){
-      alert("Please enter a valid amount");
-    }
-    else if (expenseAmount <= currentBalance) {
-      currentBalance -= expenseAmount;
-      document.getElementById("currentBalance").value = currentBalance
-      let para = document.createElement('p')
-      para.value = `Expense name:  ${expenseName} <br> Expense Amount: ${expenseAmount}`;
-      document.getElementById("addedExpense").appendChild(para);
-    }
-    else {
-      alert("Sorry your expense amount is higher than your current balance")
-    };
+  else {
+    totalBudget += incomeAmount;
+    currentBalance += incomeAmount;
+    document.getElementById("totalBudget").innerHTML = totalBudget;
+    document.getElementById("currentBalance").innerHTML = currentBalance;
+  }
+  
+
+ 
+  var incomeName = document.getElementById('incomeName').value;
+  var incomeAmount = parseInt(document.getElementById('incomeAmount').value);
+  
+  var para = document.createElement ('p');
+  para.innerHTML = `Income Name: ${incomeName} <br> Income Amount: ${incomeAmount}`;
+  document.getElementById("addedMoney").appendChild(para);
+  console.log(incomeAmount);
+};
+
+//add expenses
+function addExpense() {
+  var currentBalance = parseInt(document.getElementById("currentBalance").innerHTML);
+  var expenseName = document.getElementById('expenseName').value;
+  var expenseAmount = parseInt(document.getElementById('expenseAmount').value);
+  if (expenseName.length == " ") {
+    alert("Please enter an expense name");
+  }
+  else if (expenseAmount == " " || isNaN(expenseAmount)) {
+    alert("Please enter a valid expense amount");
+  }
+  else if (expenseAmount <= currentBalance) {
+   currentBalance -= expenseAmount;
+   document.getElementById('currentBalance').innerHTML = currentBalance
+   var para = document.createElement ('p')
+   para.innerHTML = `Expense Name: ${expenseName} <br> Expense Amount: ${expenseAmount}`;
+   document.getElementById("addedExpenses").appendChild(para);
+ }  
+ else
+  alert("Sorry your expense amount is higher thatn your current balance");
+}
+//display added expenses
+function addedExpense() {
+  var currentBalance = parseInt(document.getElementById("currentBalance").innerHTML);
+  var expenseName = document.getElementById("expenseName").value;
+  var expenseAmount = parseInt(document.getElementById('expnseAmount').value);
+  if (expenseName.length == " ") {
+    alert("Please enter an expense name");
+  }
+  else if (expenseAmount == " " || isNaN(expenseAmount)){
+    alert("Please enter a valid amount");
+  }
+  else if (expenseAmount <= currentBalance) {
+    currentBalance -= expenseAmount;
+    document.getElementById("currentBalance").innerHTML = currentBalance
+    var para = document.createElement('p')
+    para.innerHTML = `Expense name:  ${expenseName} <br> Expense Amount: ${expenseAmount}`;
+    document.getElementById("addedExpense").appendChild(para);
+  }
+  else {
+    alert("Sorry your expense amount is higher than your current balance")
   };
+};
