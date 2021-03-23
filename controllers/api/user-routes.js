@@ -70,7 +70,6 @@ router.post('/', (req, res) => {
       res.status(500).json(err);
     });
 });
-
 // user login
 router.post('/login', (req, res) => {
   // expects {email: , password: }

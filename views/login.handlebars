@@ -1,57 +1,49 @@
 <header>
+
     <nav class="navbar navbar-expand-sm fixed-top">
-      <!--  <a class="navbar-brand" href="/"> <img src="/public/assets/images/logo_header.jpg" alt="logo"> </a> -->
+        <a class="navbar-brand" href="/"> <img src="/public/assets/images/logo_header.gif" alt="logo"> </a>
         <ul class="nav justify-content-end">
+
             <li class="nav-item">
-                <a class="nav-link" href="#about-us">About Us</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#faq">FAQ</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/dashboard">Dashboard</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact</a>
-            </li>
-            {{#if loggedIn}}
-            <li class="nav-item">
-                <a class="nav-link" href="/dashboard">Dashboard</a>
-            </li>
-            <li class="nav-item">
-                <button class="nav-link" id="logout">Logout</button>
+                <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/signup">Sign up</a>
             </li>
-            {{/if}}
         </ul>
-
     </nav>
+</header>
 
-<div class="card">
-    <div class="card-header">
-        <h2>Login</h2>
-    </div>
-    <form id="login-form" class="card-body">
-        <div>
-            <label for="username-input-login">Username</label>
-            <input type="text" id="username-input-login" />
+
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm"></div>
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-header">
+                        <h2>Login</h2>
+                    </div>
+                    <div id="signup" role="tabpanel">
+                        <form id="login-form">           
+                            <div class="form-group">
+                                <label for="email-login">Email address</label>
+                                <input type="email" class="form-control" id="email-login" aria-describedby="emailHelp" placeholder="">
+                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="password-login">Password</label>
+                                <input type="password" class="form-control" id="password-login" placeholder="">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm"></div>
+
         </div>
-        <div>
-            <label for="email-input-login" class="form-label">Email Address</label>
-            <input type="text" id="email-input-login" />
-        </div>
-        <div>
-            <label for="password-input-login" class="form-label">Password</label>
-            <input type="password" id="password-input-login" />
-        </div>
-        <button type="submit" id="login-btn" class="btn">Login</button>
-        <a type="button" href="/signup">Sign up</a>
-    </form>
-</div>
+    </div>  
+</main>
 
 <script src="/javascript/login.js"></script>
-{{#if loggedIn}}
-<script src="/javascript/logout.js"></script>
-{{/if}}

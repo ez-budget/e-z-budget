@@ -1,9 +1,8 @@
+
 // import all models
 const Post = require('./Story');
 const User = require('./User');
 const Comment = require('./Comment');
-const Finance = require('./Finance');
-const Budget = require('./Budget');
 // create associations
 
 User.hasMany(Post, {
@@ -34,4 +33,4 @@ User.hasMany(Post, {
     foreignKey: 'post_id'
   });
   
-  module.exports = { User, Post, Comment, Finance, Budget };
+  module.exports = { User, Post, Comment };
