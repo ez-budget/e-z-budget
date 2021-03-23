@@ -22,23 +22,23 @@ router.get('/budget', (req, res) => {
             res.status(500).json(err);
         });
 })
-router.get('/budget/:id', (req, res) => {
-    Budget.findOne({
-        attributes: [
-            ' id', 'budget_title', 'incomeName', 'incomeAmount', 'expenseName', 'expenseAmount']
-    })
-        .then(dbBudgetData => {
-            if (!dbBudgetData) {
-                res.status(404).json({ message: 'No budget found with this id' });
-                return;
-            }
-            res.json(dbBudgetData);
-        })
-        .catch(err => {
-            console.log(err);
-            res.status(500).json(err);
-        });
-});
+  //  router.get('/budget/:id', (req, res) => {
+    //Budget.findOne({
+      //  attributes: [
+        //    ' id', 'budget_title', 'incomeName', 'incomeAmount', 'expenseName', 'expenseAmount']
+//    })
+  //      .then(dbBudgetData => {
+    //        if (!dbBudgetData) {
+      //          res.status(404).json({ message: 'No budget found with this id' });
+        //        return;
+          //  }
+            //res.json(dbBudgetData);
+     //   })
+        //.catch(err => {
+         //   console.log(err);
+         //   res.status(500).json(err);
+      ////  });
+//});
 // create budget
 router.post('/', withAuth, (req, res) => {
     Budget.create({

@@ -10,4 +10,4 @@ router.use('/budget', budgetRoutes);
 router.use('/api', apiRoutes);
 
 
-module.exports = router
+module.exports = router;

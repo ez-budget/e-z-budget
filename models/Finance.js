@@ -26,7 +26,7 @@ Finance.init(
       }
     }     
   },
-  
+    
   {
     sequelize,
     freezeTableName: true,
