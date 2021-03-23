@@ -11,10 +11,21 @@ router.get('/', (req, res) => {
       'budget_title'
     ],
     include: 
-      {
-        model: User,
-        attributes: ['id', 'username']
-      }
+      [
+        {
+          model: Finance,
+          attributes: ['id', 'income_source', 'income_receipt', 'income_remark',
+           'expense_item', 'expense_payment', 'expense_comment'],
+          include: {
+            model: Budget,
+            attributes: ['id','budget_title']
+          }
+        }, 
+        {
+          model: User,
+          attributes: ['id', 'username']
+        }       
+      ]
     
   })
     .then(dbBudgetData => res.json(dbBudgetData))
@@ -35,10 +46,21 @@ router.get('/:id', (req, res) => {
       'budget_title'
     ],
     include: 
-    {
-      model: User,
-      attributes: ['id', 'username']
-    }
+    [
+      {
+        model: Finance,
+        attributes: ['id', 'income_source', 'income_receipt', 'income_remark',
+         'expense_item', 'expense_payment', 'expense_comment'],
+        include: {
+          model: Budget,
+          attributes: ['id','budget_title']
+        }
+      }, 
+      {
+        model: User,
+        attributes: ['id', 'username']
+      }       
+    ]
   })
     .then(dbBudgetData => {
       if (!dbBudgetData) {

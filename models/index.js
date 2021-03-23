@@ -43,7 +43,7 @@ Budget.belongsTo(User, {
   foreignKey: 'user_id',
   onDelete: 'SET NULL'
 });
-/*
+
 Budget.hasMany(Finance, {
   foreignKey: 'budget_id'
 });
@@ -52,6 +52,6 @@ Finance.belongsTo(Budget, {
   foreignKey: 'budget_id',
   onDelete: 'SET NULL'
 });
-*/
+
   
 module.exports = { User, Post, Comment, Budget, Finance };

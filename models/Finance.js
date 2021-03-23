@@ -21,7 +21,7 @@ Finance.init(
       }
     },
     income_receipt: {
-        type: DataTypes.STRING,
+        type: DataTypes.DECIMAL,
         allowNull: false,
         validate: {
           len: [1]
@@ -42,7 +42,7 @@ Finance.init(
         }
     },
     expense_payment: {
-        type: DataTypes.STRING,
+        type: DataTypes.DECIMAL,
         allowNull: false,
         validate: {
         len: [1]
