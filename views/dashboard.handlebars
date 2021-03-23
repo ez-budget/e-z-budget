@@ -32,7 +32,7 @@
                         {{#each posts as |post|}}
                         <li>
                         {{> story-info post}}
-                        <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit</a>
+                        <a href="/dashboard/edit/story/{{post.id}}" class="edit-link">Edit</a>
                         </li>
                         {{/each}}
                     </ol>
@@ -50,7 +50,7 @@
                         {{#each budgets as |budget|}}
                         <li>
                         {{> budget-info budget}}
-                        <a href="/dashboard/edit/{{budget.id}}" class="edit-link">Edit</a>
+                        <a href="/dashboard/edit/budget/{{budget.id}}" class="edit-link">Edit</a>
                         </li>
                         {{/each}}
                     </ol>

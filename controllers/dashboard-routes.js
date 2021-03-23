@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Post, User, Comment, Budget } = require('../models');
 const withAuth = require('../utils/auth');
 
-// get all posts and budgets
+// get all story and budgets
 router.get('/', withAuth, (req, res) => {
     Budget.findAll({
         where: {
@@ -56,7 +56,7 @@ router.get('/', withAuth, (req, res) => {
 
 
 // edit the story
-router.get('/edit/:id', withAuth, (req, res) => {
+router.get('/edit/story/:id', withAuth, (req, res) => {
     Post.findOne({
         where: {
             id: req.params.id
@@ -80,11 +80,8 @@ router.get('/edit/:id', withAuth, (req, res) => {
     .then(dbPostData => {
         if (dbPostData) {
             const post = dbPostData.get({ plain: true });
-            
-            res.render('edit-story', {
-              post,
-              loggedIn: true
-            });
+    
+            res.render('edit-story', {post,loggedIn: true});
           } else {
             res.status(404).end();
           }
@@ -92,13 +89,31 @@ router.get('/edit/:id', withAuth, (req, res) => {
         .catch(err => {
           res.status(500).json(err);
     });
+
+});
+
+// add story
+router.get('/addstory', withAuth, (req, res) => {
+    res.render('add-story', {loggedIn: true});
+});
+
+// add budget
+router.get('/addbudget', withAuth, (req, res) => {
+    res.render('add-budget', {loggedIn: true});
+});
+
+//edit the budget
+router.get('/edit/budget/:id', withAuth, (req, res) => {
     Budget.findOne({
         where: {
             id: req.params.id
         },
         attributes: ['id', 'budget_title'],
         include: [
-            
+            {
+                model: User,
+                attributes: ['username']
+            }
         ]
     })
     .then(dbBudgetData => {
@@ -118,47 +133,9 @@ router.get('/edit/:id', withAuth, (req, res) => {
     });
 });
 
-// add story
-router.get('/addstory', withAuth, (req, res) => {
-    res.render('add-story', {loggedIn: true});
-});
-
-// add budget
-router.get('/addbudget', withAuth, (req, res) => {
-    res.render('add-budget', {loggedIn: true});
-});
-
-// edit the budget
-// router.get('/edit/:id', withAuth, (req, res) => {
-//     Budget.findOne({
-//         where: {
-//             id: req.params.id
-//         },
-//         attributes: ['id', 'budget_title'],
-//         include: [
-            
-//         ]
-//     })
-//     .then(dbBudgetData => {
-//         if (dbBudgetData) {
-//             const budget = dbBudgetData.get({ plain: true });
-            
-//             res.render('edit-budget', {
-//               budget,
-//               loggedIn: true
-//             });
-//           } else {
-//             res.status(404).end();
-//           }
-//         })
-//         .catch(err => {
-//           res.status(500).json(err);
-//     });
-// });
-
 // get single budget
 router.get('/budget/:id', withAuth, (req, res) => {
-    Post.findOne({
+    Budget.findOne({
       where: {
         id: req.params.id
       },
