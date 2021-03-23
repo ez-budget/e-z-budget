@@ -1,0 +1,87 @@
+<header>
+    <nav class="navbar navbar-expand-sm fixed-top">
+        <a class="navbar-brand" href="/"> <img src="/public/assets/images/logo_header.gif" alt="logo"> </a>
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/dashboard">Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link" id="logout">Logout</button>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <div class="container">
+        <h2>Create a Budget</h2>
+        <form action="" class="new-budget-form">
+            <div class="row form-group">
+                <div class="col-sm-0 col-md-3 col-lg-4"></div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <label for="budget-title">Budget Title</label>
+                    <input type="text" class="form-control" id="budget-title" name="budget-title"/>  
+                </div>
+                <div class="col-sm-0 col-md-3 col-lg-4"></div>
+            </div>
+            <!--<div class="row form-group">
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                    <h4>Income</h4>
+                <table class="table income-table" id="income-table">
+                        <thead>
+                            <tr>
+                            <th scope="col">Source</th>
+                            <th scope="col">Receipt</th>
+                            <th scope="col">Remarks</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">
+                                    <input type="text" class="form-control" id="income-source" name="income-source"/>  
+                                </th>
+                                <td>
+                                    <input type="text" class="form-control" id="income-receipt" name="income-receipt"/> 
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" id="income-remark" name="income-remark"/> 
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table> 
+                     <button type="button" id="addRowIncome">Add Income</button> 
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                    <h4>Expense</h4>                
+                    <table class="table expense-table">
+                        <thead>
+                            <tr>
+                            <th scope="col">Item</th>
+                            <th scope="col">Payment</th>
+                            <th scope="col">Comments</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">
+                                    <input type="text" class="form-control" id="expense-item" name="expense-item"/>  
+                                </th>
+                                <td>
+                                    <input type="text" class="form-control" id="expense-payment" name="expense-payment"/>
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control" id="expense-comment" name="expense-comment"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table> 
+                </div>
+            </div>-->
+            <button type="submit" class="btn btn-outline-success">Create</button>
+        </form>
+    </div>
+</main>
+
+<script src="/javascript/add-budget.js"></script>

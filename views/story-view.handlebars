@@ -1,0 +1,78 @@
+<header>
+    <nav class="navbar navbar-expand-sm fixed-top">
+        <a class="navbar-brand" href="/"> <img src="/public/assets/images/logo_header.gif" alt="logo"> </a>
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            {{#if loggedIn}}
+            <li class="nav-item">
+                <a class="nav-link" href="/dashboard">Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link" id="logout">Logout</button>
+            </li>
+            {{else}}
+            <li class="nav-item">
+                <a class="nav-link" href="/login">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/signup">Sign up</a>
+            </li>
+            {{/if}}
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class="container-fluid">
+        <div>
+            {{#if loggedIn}}
+            <p>Hello Insider!</p>
+            {{else}}
+            <p>Please signup to become a user and start budgeting</p>
+            {{/if}}
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 col-md-6 col-lg-4">
+                                        
+                </div>
+                <div class="col-sm-9 col-md-6 col-lg-8">
+                    <div class="col-12">
+                        <h2></h2>
+                        <div>
+                            {{> story-details post}}
+                        </div>
+                    </div>
+                    <div id="about-us" class="col-12">
+                        <h2></h2>
+                        <div>
+                            {{> comments post.comments}}
+                        </div>
+                    </div>
+                    <div id="faq" class="col-12">
+                        <h2></h2>
+                        <div>
+                            {{#if loggedIn}}
+                            <form action="" class="comment-form">
+                                <div class="form-group">
+                                    <label for="exampleFormControlTextarea1">Add Comments</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"
+                                        name="comment-body"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-outline-success">Submit</button>
+                            </form>
+                            {{/if}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+</main>
+
+{{#if loggedIn}}
+<script src="/javascript/comment.js"></script>
+<script src="/javascript/logout.js"></script>
+{{/if}}

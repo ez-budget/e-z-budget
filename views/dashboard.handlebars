@@ -1,0 +1,66 @@
+<header>
+    <nav class="navbar navbar-expand-sm fixed-top">
+        <a class="navbar-brand" href="/"> <img src="/public/assets/images/logo_header.gif" alt="logo"> </a>
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/dashboard/addbudget">Create a budget</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/dashboard/addstory">Share My Story</a>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link" id="logout">Logout</button>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <div class="container-fluid">
+        <div>
+            <p>Hello User!</p>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 col-md-6 col-lg-4">
+                    <h2>My stories</h2>
+                    {{#if posts.length}}
+                    <section>
+                    <ol>
+                        {{#each posts as |post|}}
+                        <li>
+                        {{> story-info post}}
+                        <a href="/dashboard/edit/story/{{post.id}}" class="edit-link">Edit</a>
+                        </li>
+                        {{/each}}
+                    </ol>
+                    </section>
+                    {{else}}
+                    <p>No stories yet!</p>
+                    {{/if}}
+                </div>
+                <div class="col-sm-9 col-md-6 col-lg-8">
+                    <!-- budget lists -->
+                    <h2>My Budgets</h2>
+                    {{#if budgets.length}}
+                    <section>
+                    <ol>
+                        {{#each budgets as |budget|}}
+                        <li>
+                        {{> budget-info budget}}
+                        <a href="/dashboard/edit/budget/{{budget.id}}" class="edit-link">Edit</a>
+                        </li>
+                        {{/each}}
+                    </ol>
+                    </section>
+                    {{else}}
+                    <p>No budgets created!</p>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<script src="/javascript/logout.js"></script>
