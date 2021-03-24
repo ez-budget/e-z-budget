@@ -1,0 +1,44 @@
+<header>
+    <nav class="navbar navbar-expand-sm justify-content-between">
+        <a class="navbar-brand" href="/"> <img src="/assets/images/logo_header.gif" alt="logo"> </a>
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+            </li> 
+            <li class="nav-item">
+                <a class="nav-link" href="/dashboard">Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link" id="logout">Logout</button>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class="container">
+        <div>
+            <p></p>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <div id=""></div>
+                    {{> budget-details budget}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <div id="chart_div"></div>
+                </div>
+            </div>
+        </div>
+    </div>  
+</main>
+
+
+
+<script src="/javascript/logout.js"></script>
+<!-- <script src="/javascript/budget-view.js"></script> -->
+
+

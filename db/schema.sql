@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS ezbudget_db;
+
+CREATE DATABASE ezbudget_db;
