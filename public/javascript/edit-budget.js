@@ -9,7 +9,13 @@ async function editBudgetFormHandler(event) {
     const response = await fetch(`/api/budgets/${id}`, {
       method: 'PUT',
       body: JSON.stringify({
-        budget_title
+        budget_title,
+        income_source,
+        income_receipt,
+        income_remark,
+        expense_item,
+        expense_payment,
+        expense_comment
       }),
       headers: {
         'Content-Type': 'application/json'
@@ -17,7 +23,7 @@ async function editBudgetFormHandler(event) {
     });
   
     if (response.ok) {
-      document.location.replace('/dashboard/');
+      document.location.replace(`/dashboard/budget/${id}`);
     } else {
       alert(response.statusText);
     }

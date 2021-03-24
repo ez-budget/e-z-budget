@@ -3,7 +3,7 @@ const Post = require('./Story');
 const User = require('./User');
 const Comment = require('./Comment');
 const Budget = require('./Budget');
-const Finance = require('./Finance');
+//const Finance = require('./Finance');
 
 // create associations
 
@@ -44,14 +44,14 @@ Budget.belongsTo(User, {
   onDelete: 'SET NULL'
 });
 
-Budget.hasMany(Finance, {
-  foreignKey: 'budget_id'
-});
+// Budget.hasMany(Finance, {
+//   foreignKey: 'budget_id'
+// });
 
-Finance.belongsTo(Budget, {
-  foreignKey: 'budget_id',
-  onDelete: 'SET NULL'
-});
+// Finance.belongsTo(Budget, {
+//   foreignKey: 'budget_id',
+//   onDelete: 'SET NULL'
+// });
 
   
-module.exports = { User, Post, Comment, Budget, Finance };
+module.exports = { User, Post, Comment, Budget };
