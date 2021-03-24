@@ -10,7 +10,7 @@ This is your go to spot for saving for that big purchase you have been dreaming 
 # Contributors
 
 
-|Mateo Cruz|Rose Francis|Alex Chung|Kristen Groller|Jason Yau
+| Mateo Cruz | Rose Francis | Alex Chung | Kristen Groller | Jason Yau
 
 
 |<a href="https://github.com/cruzma" target="_blank">Mateo's Github</a>| <a href="https://github.com/rosefrancis-tech"> Rose's Github</a>|<a href="https://github.com/AChung92">Alex's Github</a>|<a href="https://github.com/Kgroll">Kristen's Github</a>|<a href="https://github.com/0726hayate">Jason's Github|
