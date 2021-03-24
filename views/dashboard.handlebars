@@ -1,6 +1,6 @@
 <header>
-    <nav class="navbar navbar-expand-sm fixed-top">
-        <a class="navbar-brand" href="/"> <img src="/public/assets/images/logo_header.gif" alt="logo"> </a>
+    <nav class="navbar navbar-expand-sm justify-content-between">
+        <a class="navbar-brand" href="/"> <img src="/assets/images/logo_header.gif" alt="logo"> </a>
         <ul class="nav justify-content-end">
             <li class="nav-item">
                 <a class="nav-link" href="/">Home</a>
@@ -19,12 +19,12 @@
 </header>
 <main>
     <div class="container-fluid">
-        <div>
+        <div class="text-center">
             <p>Hello User!</p>
         </div>
         <div class="container">
-            <div class="row">
-                <div class="col-sm-3 col-md-6 col-lg-4">
+            <div class="row text-center justify-content-around">
+                <div class="col-sm-3 col-md-6 col-lg-4 opacity-1 column">
                     <h2>My stories</h2>
                     {{#if posts.length}}
                     <section>
@@ -41,7 +41,7 @@
                     <p>No stories yet!</p>
                     {{/if}}
                 </div>
-                <div class="col-sm-9 col-md-6 col-lg-8">
+                <div class="col-sm-9 col-md-6 col-lg-6 opacity-1 column">
                     <!-- budget lists -->
                     <h2>My Budgets</h2>
                     {{#if budgets.length}}
