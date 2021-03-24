@@ -1,3 +1,5 @@
+// Display results on google charts
+
 // Load the Visualization API and the corechart package.
 google.charts.load('current', {'packages':['corechart']});
 
@@ -14,12 +16,12 @@ function drawChart() {
   data.addColumn('string', 'Budget');
   data.addColumn('number', 'Amount');
   data.addRows([
-    ['Income', 3],
-    ['Expense', 1]
+    ['Income', incomeReceipt],
+    ['Expense', expensePayment]
   ]);
 
   // Set chart options
-  var options = {'title':'Income/ExpensePie Chart',
+  var options = {'title':'Income/Expense Pie Chart',
                  'width':400,
                  'height':300};
 
@@ -28,27 +30,30 @@ function drawChart() {
   chart.draw(data, options);
 }
 
+// Show the budget trade-off message
+
+const incomeReceipt = parseInt(document.querySelector('input[name="incomereceipt"]').value);
+const expensePayment = parseInt(document.querySelector('input[name="expensepayment"]').value);
 
 
-// async function newBudgetViewHandler(event) {
-    //event.preventDefault();
-    const total_income = budget.income_receipt;
-    const total_expense = budget.expense_payment;
-    const net_income = total_income - total_expense;
+const total_income = incomeReceipt;
+const total_expense = expensePayment;
+    
+    let net_income = total_income - total_expense;
     let result = "";
     if (net_income < 0) {
-        result = "DEFICIT";
+        result = "BUDGET DEFICIT";
     } 
     if (net_income > 0) {
-        result = "SURPLUS";
+        result = "BUDGET SURPLUS";
     }
     if (net_income === 0) {
-        result = "BALANCED";
+        result = "BALANCED BUDGET";
     }
-
     let display_result = document.getElementById('result');
-    display_result.textContent = 'budget surplus';
-// }
+    display_result.innerHTML = "STATUS: " + result;
+   
+
 
 
 //document.querySelector('.new-budget-form').addEventListener('submit', newBudgetViewHandler);

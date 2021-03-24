@@ -1,7 +1,7 @@
 <div class="title">
+    <p>Hello {{user.username}}!</p>
     <p>{{budget_title}}</p>
-    <span> | By {{user.username}}</span>
-    <p>BUDGET <span id="result"></span> </p>
+    <p id="result"></p>
 </div>
 <div>
     <div class="row form-group">
@@ -20,8 +20,8 @@
                         <th scope="row">
                             {{income_source}}  
                         </th>
-                        <td>
-                            {{income_receipt}} 
+                        <td >
+                            <input class="form-control-plaintext" type="text" name="incomereceipt" value="{{income_receipt}}" readonly/>
                         </td>
                         <td>
                             {{income_remark}} 
@@ -57,7 +57,7 @@
                             {{expense_item}} 
                         </th>
                         <td>
-                            {{expense_payment}}
+                            <input class="form-control-plaintext" type="text" name="expensepayment" value="{{expense_payment}}" readonly/>
                         </td>
                         <td>
                             {{expense_comment}}
