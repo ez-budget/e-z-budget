@@ -28,7 +28,7 @@ Budget.init(
       }
     },
     income_receipt: {
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
         allowNull: false,
         validate: {
           len: [1]
@@ -49,19 +49,48 @@ Budget.init(
         }
     },
     expense_payment: {
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
         allowNull: false,
         validate: {
         len: [1]
         }
     },
     expense_comment: {
-        type: DataTypes.STRING,
-        allowNull: true,
-        validate: {
-        len: [1]
-        }
-    },
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+      len: [1]
+      }
+  },
+  //   total_income: {
+  //       type: DataTypes.INTEGER,
+  //       allowNull: true,
+  //       validate: {
+  //       len: [1]
+  //       }
+  //   },
+  //   total_expense: {
+  //     type: DataTypes.INTEGER,
+  //     allowNull: false,
+  //     validate: {
+  //     len: [1]
+  //     }
+  //   },
+  //   net_income: {
+  //     type: DataTypes.INTEGER,
+  //     allowNull: false,
+  //     validate: {
+  //     len: [1]
+  //     }
+  //   },
+  //   result: {
+  //     type: DataTypes.STRING,
+  //     allowNull: false,
+  //     validate: {
+  //     len: [1]
+  //     }
+  // },
+
     user_id: {
       type: DataTypes.INTEGER,
       references: {

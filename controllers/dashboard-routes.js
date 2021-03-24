@@ -109,7 +109,8 @@ router.get('/edit/budget/:id', withAuth, (req, res) => {
         where: {
             id: req.params.id
         },
-        attributes: ['id', 'budget_title'
+        attributes: ['id', 'budget_title',
+        'income_source', 'income_receipt', 'income_remark', 'expense_item', 'expense_payment', 'expense_comment'
         ],
         include: [
             {
@@ -143,6 +144,11 @@ router.get('/budget/:id', withAuth, (req, res) => {
       },
       attributes: ['id', 'budget_title', 
       'income_source', 'income_receipt', 'income_remark', 'expense_item', 'expense_payment', 'expense_comment'
+    //   ,
+    //   'total_income',
+    //   'total_expense',
+    //   'net_income',
+    //   'result'
       ],  
       include: 
       [

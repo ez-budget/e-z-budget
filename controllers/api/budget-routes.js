@@ -8,7 +8,18 @@ router.get('/', (req, res) => {
   Budget.findAll({
     attributes: [
       'id',
-      'budget_title', 'income_source', 'income_receipt', 'income_remark', 'expense_item', 'expense_payment', 'expense_comment'
+      'budget_title', 
+      'income_source', 
+      'income_receipt', 
+      'income_remark', 
+      'expense_item', 
+      'expense_payment', 
+      'expense_comment'
+      // ,
+      // 'total_income',
+      // 'total_expense',
+      // 'net_income',
+      // 'result'
     ],
     include: 
       [
@@ -45,6 +56,11 @@ router.get('/:id', (req, res) => {
       'id',
       'budget_title',
       'income_source', 'income_receipt', 'income_remark', 'expense_item', 'expense_payment', 'expense_comment'
+      // ,
+      // 'total_income',
+      // 'total_expense',
+      // 'net_income',
+      // 'result'
     ],
     include: 
     [
@@ -86,6 +102,10 @@ router.post('/', withAuth, (req, res) => {
     expense_item: req.body.expense_item,
     expense_payment: req.body.expense_payment,
     expense_comment: req.body.expense_comment,
+    // total_income,
+    // total_expense,
+    // net_income,
+    // result,
     user_id: req.session.user_id
   })
     .then(dbBudgetData => res.json(dbBudgetData))

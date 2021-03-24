@@ -8,6 +8,23 @@ async function newBudgetFormHandler(event) {
     const expense_item = document.querySelector('input[name="expense-item"]').value;
     const expense_payment = document.querySelector('input[name="expense-payment"]').value;
     const expense_comment = document.querySelector('input[name="expense-comment"]').value;
+    // const total_income = income_receipt;
+    // const total_expense = expense_payment;
+    // const net_income = total_income - total_expense;
+    // let result = "";
+    // if (net_income < 0) {
+    //   result = "DEFICIT";
+    // } 
+    // if (net_income > 0) {
+    //   result = "SURPLUS";
+    // }
+    // if (net_income === 0) {
+    //   result = "BALANCED";
+    // }
+
+    // let display_result = document.getElementById('result');
+    // display_result.innerHTML = 'budget surplus';
+    
   
     const response = await fetch(`/api/budgets`, {
       method: 'POST',
@@ -19,6 +36,11 @@ async function newBudgetFormHandler(event) {
         expense_item,
         expense_payment,
         expense_comment
+        // ,
+        // total_income,
+        // total_expense,
+        // net_income,
+        // result
       }),
       headers: {
         'Content-Type': 'application/json'
@@ -30,7 +52,11 @@ async function newBudgetFormHandler(event) {
     } else {
       alert(response.statusText);
     }
-}
+
+
+};
+
+
 /*
 function addRowIncome(event) {
     event.preventDefault();
