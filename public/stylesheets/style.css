@@ -5,8 +5,24 @@ body{
     padding: 0;
 }
 
+.page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
 header{
     background-color: #426D49;
+
+}
+
+a{
+    color: #98B4D4;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none;
+    color: blanchedalmond;
 }
 
 header a{
@@ -25,7 +41,7 @@ nav{
 }
 
 main{
-    margin-bottom: 60px;
+    padding-bottom: 250px;
 }
 
 button {
@@ -49,6 +65,7 @@ button {
     background-color: #3e8f4b;
     animation: background 3s linear infinite;
   }
+
 
 
 /* landing page */
@@ -113,14 +130,8 @@ button {
     background-image: url(../assets/images/money-growing.jpg);
 }
 
-.columns-container{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-
-}
 .column{
-    background-color: #426D49;
+    background-color: rgba(104, 148, 104, 0.7);
     padding: 20px;
     border-radius: 20px;
     border: 1px solid black; 
@@ -128,6 +139,13 @@ button {
     /* margin: 20px;*/
 }
 
+.column a{
+    color: royalblue;
+}
+
+.column a:hover{
+    color:aliceblue;
+}
 
 
 /* hompage ends */
@@ -189,13 +207,17 @@ footer{
     clear: both;
     border: 1px groove #aaaaaa;
     color: White;
-    padding: 0;
     text-align: center;
     vertical-align: middle;
-    line-height: normal;
     margin: 0;
-    position: fixed;
-    bottom: 0px;
+    background-color: #6c757d;
+    position: absolute;
+    bottom: 0;
     width: 100%;
-    background-color: #426D49;
+}
+
+footer a img{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
 }
