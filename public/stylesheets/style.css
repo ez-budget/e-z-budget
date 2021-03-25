@@ -1,5 +1,5 @@
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Mulish', sans-serif;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -11,8 +11,7 @@ body{
 }
 
 header{
-    background-color: #426D49;
-
+    background-image: linear-gradient(to right, rgb(96, 106, 61), rgb(66, 109, 73, 1)) ;
 }
 
 a{
@@ -22,11 +21,11 @@ a{
 
 a:hover{
     text-decoration: none;
-    color: blanchedalmond;
+    color:#aaaaaa;
 }
 
 header a{
-    color:#aaaaaa;
+    color:blanchedalmond;
 }
 
 header a img{
@@ -131,6 +130,13 @@ button {
     background-image: url(../assets/images/money-growing.jpg);
 }
 
+.jumbo-text{
+    background-color: rgb(146, 155, 65, 0.6);
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
 .column{
     background-color: rgba(104, 148, 104, 0.7);
     padding: 20px;
@@ -138,6 +144,7 @@ button {
     border: 1px solid black; 
     width: 100%;
     /* margin: 20px;*/
+    box-shadow:0 20px 26px 0 rgba(0,0,0,0.5),0 16px 30px 0 rgba(0,0,0,0.5);
 }
 
 .column a{
