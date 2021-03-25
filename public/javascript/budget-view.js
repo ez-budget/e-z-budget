@@ -16,8 +16,8 @@ function drawChart() {
   data.addColumn('string', 'Budget');
   data.addColumn('number', 'Amount');
   data.addRows([
-    ['Income', incomeReceipt],
-    ['Expense', expensePayment]
+    ['Income', total_income],
+    ['Expense', total_expense]
   ]);
 
   // Set chart options
