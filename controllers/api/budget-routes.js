@@ -146,11 +146,7 @@ router.put('/:id', withAuth, (req, res) => {
     });
 });
 
-<<<<<<< HEAD
-// delete story
-=======
 // delete budget
->>>>>>> develop
 router.delete('/:id', withAuth, (req, res) => {
   Budget.destroy({
     where: {

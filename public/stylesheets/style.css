@@ -1,9 +1,5 @@
 body{
-<<<<<<< HEAD
-    font-family: Arial, Helvetica, sans-serif;
-=======
     font-family: 'Varela Round', 'Montserrat', sans-serif;
->>>>>>> develop
     height: 100%;
     margin: 0;
     padding: 0;
@@ -48,11 +44,8 @@ main{
     padding-bottom: 250px;
 }
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> develop
 button {
     /* display: block; */
     cursor: pointer;
@@ -95,13 +88,6 @@ button {
     display: flex;
     flex-direction: column;
     width: 100%;
-<<<<<<< HEAD
-    background-image: url(../assets/images/money-growing.jpg);
-    /* background-size: 100% 100%; */
-    object-fit:contain;
-    background-repeat: no-repeat;
-    height: 100vh;
-=======
     background-image: url(../assets/images/Background1.png);
     /*background-size: 100% 100%; */
     object-fit:contain;
@@ -116,7 +102,6 @@ main .login-form #email-login {
 main .login-form  #password-login {
     border-radius: 30px;
 
->>>>>>> develop
 }
 
 .login-container{
@@ -136,24 +121,16 @@ main .login-form  #password-login {
 
     height: 150px;  
     width: 150px;
-<<<<<<< HEAD
-    border: 2px solid black;
-=======
     /*border: 2px solid black;*/
->>>>>>> develop
     margin-top: 2px;
     margin-bottom: 10px;
     border-radius: 50%;
 
 }
-<<<<<<< HEAD
-
-=======
 .landing-headline {
     
     color: #426D49;
 }
->>>>>>> develop
 .login-image-container img{
     max-width: 100%;
     max-height: 100%;
@@ -166,15 +143,6 @@ main .login-form  #password-login {
 /* homepage */
 .jumbotron-background{
     background-image: url(../assets/images/money-growing.jpg);
-<<<<<<< HEAD
-}
-
-.column{
-    background-color: rgba(104, 148, 104, 0.7);
-    padding: 20px;
-    border-radius: 20px;
-    border: 1px solid black; 
-=======
     color: #426D49;
     margin: 0;
 }
@@ -184,22 +152,11 @@ main .login-form  #password-login {
     padding: 20px;
     border-radius: 20px;
     /*border: 1px solid black; */
->>>>>>> develop
     width: 100%;
     /* margin: 20px;*/
 }
 
 .column a{
-<<<<<<< HEAD
-    color: royalblue;
-}
-
-.column a:hover{
-    color:aliceblue;
-}
-
-
-=======
     color: #426D49;
 }
 
@@ -235,7 +192,6 @@ main .message {
     margin:0;
 
 }
->>>>>>> develop
 /* hompage ends */
 
 /* login page */
@@ -252,10 +208,7 @@ main .message {
 
 /* login page styling ends */
 
-<<<<<<< HEAD
-=======
 
->>>>>>> develop
 /* signup page syling begins*/
 
 .signup-main{
@@ -279,11 +232,8 @@ main .message {
 
 /* signup page ends */
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> develop
 /*edit-story styling begins*/
 
 .edit-story-container{
@@ -298,40 +248,25 @@ main .message {
 
 /* edit-story styling end*/
 
-<<<<<<< HEAD
-/* footer */
-=======
 /* footer style starts */
->>>>>>> develop
 
 footer{
     clear: both;
     border: 1px groove #aaaaaa;
     color: White;
-<<<<<<< HEAD
-    text-align: center;
-    vertical-align: middle;
-=======
     text-align: left;
->>>>>>> develop
     margin: 0;
     background-color: #6c757d;
     position: absolute;
     bottom: 0;
     width: 100%;
-<<<<<<< HEAD
-=======
     padding: 3% 3%;
->>>>>>> develop
 }
 
 footer a img{
     border-radius: 50%;
     height: 50px;
     width: 50px;
-<<<<<<< HEAD
-}
-=======
 }
 
 
@@ -342,4 +277,3 @@ footer a img{
 }
 
 /* footer style ends */
->>>>>>> develop
