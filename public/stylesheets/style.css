@@ -11,7 +11,7 @@ body{
 }
 
 header{
-    background-color: #426D49;
+    background-image: linear-gradient(to right, rgb(96, 106, 61), rgb(66, 109, 73, 1));
 
 }
 
@@ -22,11 +22,11 @@ a{
 
 a:hover{
     text-decoration: none;
-    color: blanchedalmond;
+    color:#aaaaaa;
 }
 
 header a{
-    color:#aaaaaa;
+    color:blanchedalmond;   
 }
 
 header a img{
@@ -35,10 +35,6 @@ header a img{
     width: 50px;
 }
 
-nav{
-   display: flex;
-   justify-content: space-between;
-}
 
 main{
     padding-bottom: 250px;
@@ -71,16 +67,29 @@ button {
 
 
 /* landing page */
-
-.header-text-color a{
-    color: #aaaaaa;
-    background-color: #426D49; 
-    font-size: 20px;
-    font-weight: bold;
+.landing-background{
+    background-image: url(../assets/images/Background1.png);
 }
 
-.header-text-color a:hover{
-    color:#aaaaaa;
+.landing-header-background{
+    background-image: none!important;
+}
+
+.landing-header{
+    width: 200px;
+}
+
+.landing-header a{
+    background-color: #92DE34;
+    border-radius: 30px;
+    font-weight: 600;
+    color: #025600;
+    background-size: 100% 100%;
+}
+
+.landing-header a:hover{
+    background-color: #3e8f4b;
+    animation: background 3s linear infinite;
 }
 
 .main-wrapper{
@@ -88,13 +97,14 @@ button {
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-image: url(../assets/images/Background1.png);
     /*background-size: 100% 100%; */
     object-fit:contain;
     background-repeat: no-repeat;
     height: 100vh;
     
 }
+
+
 main .login-form #email-login {
     border-radius: 30px;
 
@@ -114,7 +124,7 @@ main .login-form  #password-login {
     height: 100%;
     /* margin-top: 31%;
     margin-bottom: 30.9%; */
-    
+    z-index: 2;
 }
 
 .login-image-container{
@@ -277,3 +287,34 @@ footer a img{
 }
 
 /* footer style ends */
+
+
+
+@media only screen and (max-width: 991px) {
+    #copyright{
+        position: relative;
+    }
+}
+
+@media only screen and (max-width: 610px) {
+    nav {
+        display: flex;
+        justify-content: center !important;
+        margin-right: 0;
+    }
+    .login-input{
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer{
+        position: relative;
+    }
+
+    .footer-center{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+     }
+}
