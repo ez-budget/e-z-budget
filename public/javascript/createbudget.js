@@ -10,6 +10,7 @@ function addMoney() {
     currentBalance += incomeAmount;
     document.getElementById("totalBudget").innerHTML = totalBudget;
     document.getElementById("currentBalance").innerHTML = currentBalance;
+    console.log(totalBudget);
   }
   
 
@@ -20,7 +21,7 @@ function addMoney() {
   var para = document.createElement ('p');
   para.innerHTML = `Income Name: ${incomeName} <br> Income Amount: ${incomeAmount}`;
   document.getElementById("addedMoney").appendChild(para);
-  console.log(incomeAmount);
+  console.log(incomeName, incomeAmount);
 };
 
 //add expenses
@@ -40,6 +41,8 @@ function addExpense() {
    var para = document.createElement ('p')
    para.innerHTML = `Expense Name: ${expenseName} <br> Expense Amount: ${expenseAmount}`;
    document.getElementById("addedExpenses").appendChild(para);
+   console.log(expenseName, expenseAmount);
+   console.log(currentBalance);
  }  
  else
   alert("Sorry your expense amount is higher thatn your current balance");

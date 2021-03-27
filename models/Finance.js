@@ -1,74 +1,66 @@
-// const { Model, DataTypes } = require('sequelize');
-// const sequelize = require('../config/connection');
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
 
-// // create Finance model
-// class Finance extends Model {}
+class Finance extends Model { }
 
-// // create fields/columns for Budget model
-// Finance.init(
-//   {
-//     id: {
-//       type: DataTypes.INTEGER,
-//       allowNull: false,
-//       primaryKey: true,
-//       autoIncrement: true
-//     },
-//     income_source: {
-//       type: DataTypes.STRING,
-//       allowNull: false,
-//       validate: {
-//         len: [1]
-//       }
-//     },
-//     income_receipt: {
-//         type: DataTypes.DECIMAL,
-//         allowNull: false,
-//         validate: {
-//           len: [1]
-//         }
-//     },
-//     income_remark: {
-//         type: DataTypes.STRING,
-//         allowNull: true,
-//         validate: {
-//           len: [1]
-//         }
-//     },
-//     expense_item: {
-//         type: DataTypes.STRING,
-//         allowNull: false,
-//         validate: {
-//           len: [1]
-//         }
-//     },
-//     expense_payment: {
-//         type: DataTypes.DECIMAL,
-//         allowNull: false,
-//         validate: {
-//         len: [1]
-//         }
-//     },
-//     expense_comment: {
-//         type: DataTypes.STRING,
-//         allowNull: true,
-//         validate: {
-//         len: [1]
-//         }
-//     },
-//     budget_id: {
-//       type: DataTypes.INTEGER,
-//       references: {
-//         model: 'budget',
-//         key: 'id'
-//       }
-//     }
-//   },
-//   {
-//     sequelize,
-//     freezeTableName: true,
-//     underscored: true,
-//     modelName: 'finance'
-//   }
-// );
+Finance.init(
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true
+    },
+    Finance_title: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    incomeName: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    incomeAmount: {
+      type: DataTypes.INTEGER,
+        allowNull: false,
+        validate: {
+        len: [1]
+    }
+    },
+    expenseName: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    expenseAmount: {
+      type: DataTypes.INTEGER,
+        allowNull: false,
+        validate: {
+        len: [1]
+        }
+    },
+    total_Finance: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+    },
+    current_balance: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+    },
 
-// module.exports = Finance;
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id'
+      }
+    }
+  },
+
+  {
+    sequelize,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'Finance'
+  }
+);
+
+module.exports = Finance;

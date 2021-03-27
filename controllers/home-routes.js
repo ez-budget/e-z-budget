@@ -102,4 +102,8 @@ router.get('/signup', (req, res) => {
     res.render('signup');
 });
 
+// add budget
+router.get('/createbudget',  (req, res) => {
+  res.render('createbudget', {loggedIn: true});
+});
 module.exports = router;
