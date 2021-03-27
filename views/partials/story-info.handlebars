@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <article class="post">
   <div class="title">
     <a href="/post/{{id}}" target="_blank">{{story_title}}</a>
@@ -5,5 +6,14 @@
   </div>
   <div class="meta">
     <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
+=======
+<article class="post ">
+  <div class="title">
+    <a href="/home/post/{{id}}" target="_blank">{{story_title}}</a>
+    <span> | By {{user.username}} | {{format_date created_at}}</span>
+  </div>
+  <div class="meta">
+    <a>{{comments.length}} {{format_plural "comment" comments.length}}</a>
+>>>>>>> develop
   </div>
 </article>

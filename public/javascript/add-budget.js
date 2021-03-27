@@ -32,7 +32,11 @@ async function newBudgetFormHandler(event) {
     });
 
     if (response.ok) {
+<<<<<<< HEAD
       document.location.replace('/dashboard/');
+=======
+      document.location.replace('/dashboard');
+>>>>>>> develop
     } else {
       alert(response.statusText);
     }
