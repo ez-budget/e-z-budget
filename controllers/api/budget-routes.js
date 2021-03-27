@@ -8,19 +8,30 @@ router.get('/', (req, res) => {
   Budget.findAll({
     attributes: [
       'id',
-      'budget_title'
+      'budget_title', 
+      'income_source', 
+      'income_receipt', 
+      'income_remark', 
+      'expense_item', 
+      'expense_payment', 
+      'expense_comment'
+      // ,
+      // 'total_income',
+      // 'total_expense',
+      // 'net_income',
+      // 'result'
     ],
     include: 
       [
-        {
-          model: Finance,
-          attributes: ['id', 'income_source', 'income_receipt', 'income_remark',
-           'expense_item', 'expense_payment', 'expense_comment'],
-          include: {
-            model: Budget,
-            attributes: ['id','budget_title']
-          }
-        }, 
+        // {
+        //   model: Finance,
+        //   attributes: ['id', 'income_source', 'income_receipt', 'income_remark',
+        //    'expense_item', 'expense_payment', 'expense_comment'],
+        //   include: {
+        //     model: Budget,
+        //     attributes: ['id','budget_title']
+        //   }
+        // }, 
         {
           model: User,
           attributes: ['id', 'username']
@@ -43,19 +54,25 @@ router.get('/:id', (req, res) => {
     },
     attributes: [
       'id',
-      'budget_title'
+      'budget_title',
+      'income_source', 'income_receipt', 'income_remark', 'expense_item', 'expense_payment', 'expense_comment'
+      // ,
+      // 'total_income',
+      // 'total_expense',
+      // 'net_income',
+      // 'result'
     ],
     include: 
     [
-      /*{
-        model: Finance,
-        attributes: ['id', 'income_source', 'income_receipt', 'income_remark',
-         'expense_item', 'expense_payment', 'expense_comment'],
-        include: {
-          model: Budget,
-          attributes: ['id','budget_title']
-        }
-      }, */
+      // {
+      //   model: Finance,
+      //   attributes: ['id', 'income_source', 'income_receipt', 'income_remark',
+      //    'expense_item', 'expense_payment', 'expense_comment'],
+      //   include: {
+      //     model: Budget,
+      //     attributes: ['id','budget_title']
+      //   }
+      // }, 
       {
         model: User,
         attributes: ['id', 'username']
@@ -79,6 +96,16 @@ router.get('/:id', (req, res) => {
 router.post('/', withAuth, (req, res) => {
   Budget.create({
     budget_title: req.body.budget_title,
+    income_source: req.body.income_source,
+    income_receipt: req.body.income_receipt,
+    income_remark: req.body.income_remark,
+    expense_item: req.body.expense_item,
+    expense_payment: req.body.expense_payment,
+    expense_comment: req.body.expense_comment,
+    // total_income,
+    // total_expense,
+    // net_income,
+    // result,
     user_id: req.session.user_id
   })
     .then(dbBudgetData => res.json(dbBudgetData))
@@ -92,7 +119,13 @@ router.post('/', withAuth, (req, res) => {
 router.put('/:id', withAuth, (req, res) => {
   Budget.update(
     {
-      budget_title: req.body.budget_title
+      budget_title: req.body.budget_title,
+      income_source: req.body.income_source,
+      income_receipt: req.body.income_receipt,
+      income_remark: req.body.income_remark,
+      expense_item: req.body.expense_item,
+      expense_payment: req.body.expense_payment,
+      expense_comment: req.body.expense_comment
     },
     {
       where: {
@@ -113,7 +146,7 @@ router.put('/:id', withAuth, (req, res) => {
     });
 });
 
-// delete story
+// delete budget
 router.delete('/:id', withAuth, (req, res) => {
   Budget.destroy({
     where: {

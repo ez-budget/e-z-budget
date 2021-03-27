@@ -1,60 +1,84 @@
-<article class="post">
-  <div class="title">
-    <a href="/dashboard/budget/{{id}}" target="_blank">{{budget_title}}</a>
-    <span> | By {{user.username}}</span>
-  </div>
-  <div>
-                  <div class="row form-group">
-                <div class="col-sm-6 col-md-6 col-lg-6">
-                    <h4>Income</h4>
-                <table class="table income-table" id="income-table">
-                        <thead>
-                            <tr>
-                            <th scope="col">Source</th>
-                            <th scope="col">Receipt</th>
-                            <th scope="col">Remarks</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">
-                                    {{income_source}}  
-                                </th>
-                                <td>
-                                    {{income_receipt}} 
-                                </td>
-                                <td>
-                                    {{income_remark}} 
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table> 
-                </div>
-                <div class="col-sm-6 col-md-6 col-lg-6">
-                    <h4>Expense</h4>                
-                    <table class="table expense-table">
-                        <thead>
-                            <tr>
-                            <th scope="col">Item</th>
-                            <th scope="col">Payment</th>
-                            <th scope="col">Comments</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">
-                                    {{expense_item}} 
-                                </th>
-                                <td>
-                                    {{expense_payment}}
-                                </td>
-                                <td>
-                                    {{expense_comment}}
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table> 
-                </div>
-            </div>
-  </div>
-</article>
+<div class="title">
+    <p>Hello {{user.username}}!</p>
+    <p class="text-center">{{budget_title}}</p>
+    <p id="result" class="text-center"></p>
+</div>
+<div>
+    <div class="row form-group">
+        <div class="col-sm-6 col-md-6 col-lg-6">
+            <h4>Income</h4>
+            <table class="table income-table" id="income-table">
+                <thead>
+                    <tr>
+                    <th scope="col">Source</th>
+                    <th scope="col">Receipt</th>
+                    <th scope="col">Comments</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">
+                            {{income_source}}  
+                        </th>
+                        <td >
+                            <input class="form-control-plaintext" type="text" name="incomereceipt" value="{{income_receipt}}" readonly/>
+                        </td>
+                        <td>
+                            {{income_remark}} 
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <!--Total-->  
+                        </th>
+                        <td>
+                                
+                        </td>
+                        <td>
+                                
+                        </td>
+                    </tr>
+                </tbody>
+            </table> 
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6">
+            <h4>Expense</h4>                
+            <table class="table expense-table">
+                <thead>
+                    <tr>
+                    <th scope="col">Item</th>
+                    <th scope="col">Payment</th>
+                    <th scope="col">Comments</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">
+                            {{expense_item}} 
+                        </th>
+                        <td>
+                            <input class="form-control-plaintext" type="text" name="expensepayment" value="{{expense_payment}}" readonly/>
+                        </td>
+                        <td>
+                            {{expense_comment}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <!--Total--> 
+                        </th>
+                        <td>
+                                
+                        </td>
+                        <td>
+                                
+                        </td>
+                    </tr>
+                </tbody>
+            </table> 
+        </div>
+    </div>
+</div>
+
+<script src="/javascript/budget-view.js"></script>
+
