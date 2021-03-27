@@ -1,5 +1,5 @@
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Varela Round', 'Montserrat', sans-serif;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -43,6 +43,8 @@ nav{
 main{
     padding-bottom: 250px;
 }
+
+
 
 button {
     /* display: block; */
@@ -91,6 +93,15 @@ button {
     object-fit:contain;
     background-repeat: no-repeat;
     height: 100vh;
+    
+}
+main .login-form #email-login {
+    border-radius: 30px;
+
+}
+main .login-form  #password-login {
+    border-radius: 30px;
+
 }
 
 .login-container{
@@ -110,13 +121,16 @@ button {
 
     height: 150px;  
     width: 150px;
-    border: 2px solid black;
+    /*border: 2px solid black;*/
     margin-top: 2px;
     margin-bottom: 10px;
     border-radius: 50%;
 
 }
-
+.landing-headline {
+    
+    color: #426D49;
+}
 .login-image-container img{
     max-width: 100%;
     max-height: 100%;
@@ -202,19 +216,20 @@ button {
 
 /* edit-story styling end*/
 
-/* footer */
+/* footer style starts */
 
 footer{
     clear: both;
     border: 1px groove #aaaaaa;
     color: White;
-    text-align: center;
-    vertical-align: middle;
+    text-align: left;
+    vertical-align: baseline;
     margin: 0;
     background-color: #6c757d;
     position: absolute;
     bottom: 0;
     width: 100%;
+    padding: 3% 3%;
 }
 
 footer a img{
@@ -222,3 +237,9 @@ footer a img{
     height: 50px;
     width: 50px;
 }
+
+footer .social-media {
+    text-align: center;
+}
+
+/* footer style ends */
