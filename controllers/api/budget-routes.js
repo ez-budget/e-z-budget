@@ -146,7 +146,7 @@ router.put('/:id', withAuth, (req, res) => {
     });
 });
 
-// delete story
+// delete budget
 router.delete('/:id', withAuth, (req, res) => {
   Budget.destroy({
     where: {
