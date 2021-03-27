@@ -1,5 +1,5 @@
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Varela Round', 'Montserrat', sans-serif;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -44,6 +44,8 @@ main{
     padding-bottom: 250px;
 }
 
+
+
 button {
     /* display: block; */
     cursor: pointer;
@@ -86,11 +88,20 @@ button {
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-image: url(../assets/images/money-growing.jpg);
-    /* background-size: 100% 100%; */
+    background-image: url(../assets/images/Background1.png);
+    /*background-size: 100% 100%; */
     object-fit:contain;
     background-repeat: no-repeat;
     height: 100vh;
+    
+}
+main .login-form #email-login {
+    border-radius: 30px;
+
+}
+main .login-form  #password-login {
+    border-radius: 30px;
+
 }
 
 .login-container{
@@ -110,13 +121,16 @@ button {
 
     height: 150px;  
     width: 150px;
-    border: 2px solid black;
+    /*border: 2px solid black;*/
     margin-top: 2px;
     margin-bottom: 10px;
     border-radius: 50%;
 
 }
-
+.landing-headline {
+    
+    color: #426D49;
+}
 .login-image-container img{
     max-width: 100%;
     max-height: 100%;
@@ -129,26 +143,55 @@ button {
 /* homepage */
 .jumbotron-background{
     background-image: url(../assets/images/money-growing.jpg);
+    color: #426D49;
+    margin: 0;
 }
 
 .column{
-    background-color: rgba(104, 148, 104, 0.7);
+    /*background-color: rgba(104, 148, 104, 0.7);*/
     padding: 20px;
     border-radius: 20px;
-    border: 1px solid black; 
+    /*border: 1px solid black; */
     width: 100%;
     /* margin: 20px;*/
 }
 
 .column a{
-    color: royalblue;
+    color: #426D49;
 }
 
 .column a:hover{
-    color:aliceblue;
+    color:#8fb427;
 }
 
+main .message {
+    background-color: #8fb427;
+    background-image: linear-gradient(#8fb427, white);
+    padding: 0;
+    margin: 0;
+    width: fit-content;
+}
 
+.light-gradient {
+    background-color: #dde7c0;
+    background-image: linear-gradient(#dde7c0, white);
+    padding: 2rem;
+    margin: 3rem;
+    width: 100%;
+}
+
+.no-bullets {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margins */
+    width:fit-content;
+}
+
+.post-list {
+    padding: 0;
+    margin:0;
+
+}
 /* hompage ends */
 
 /* login page */
@@ -164,6 +207,7 @@ button {
 }
 
 /* login page styling ends */
+
 
 /* signup page syling begins*/
 
@@ -188,6 +232,8 @@ button {
 
 /* signup page ends */
 
+
+
 /*edit-story styling begins*/
 
 .edit-story-container{
@@ -202,19 +248,19 @@ button {
 
 /* edit-story styling end*/
 
-/* footer */
+/* footer style starts */
 
 footer{
     clear: both;
     border: 1px groove #aaaaaa;
     color: White;
-    text-align: center;
-    vertical-align: middle;
+    text-align: left;
     margin: 0;
     background-color: #6c757d;
     position: absolute;
     bottom: 0;
     width: 100%;
+    padding: 3% 3%;
 }
 
 footer a img{
@@ -222,3 +268,12 @@ footer a img{
     height: 50px;
     width: 50px;
 }
+
+
+#copyright {
+    font-size: 75%;
+    position: absolute;
+    bottom: 0;
+}
+
+/* footer style ends */
