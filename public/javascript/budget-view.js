@@ -51,9 +51,9 @@ const total_expense = expensePayment;
         result = "BALANCED BUDGET";
     }
     let display_result = document.getElementById('result');
-    display_result.innerHTML = "STATUS: " + result;*/
+    display_result.innerHTML = "STATUS: " + result;
    
 
 
 
-//document.querySelector('.new-budget-form').addEventListener('submit', newBudgetViewHandler);
+//document.querySelector('.new-budget-form').addEventListener('submit', newBudgetViewHandler);*/

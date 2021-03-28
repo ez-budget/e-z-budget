@@ -64,7 +64,10 @@ button {
     animation: background 3s linear infinite;
   }
 
-
+.margin-top-bottom{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
 
 /* landing page */
 .landing-background{
@@ -163,6 +166,7 @@ main .login-form  #password-login {
     border-radius: 20px;
     /*border: 1px solid black; */
     width: 100%;
+    margin-top: 3rem
     /* margin: 20px;*/
 }
 
@@ -186,7 +190,7 @@ main .message {
     background-color: #dde7c0;
     background-image: linear-gradient(#dde7c0, white);
     padding: 2rem;
-    margin: 3rem;
+    /* margin: 3rem; */
     width: 100%;
 }
 
@@ -216,6 +220,14 @@ main .message {
     align-items: center;
 }
 
+.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+
 /* login page styling ends */
 
 
@@ -227,14 +239,20 @@ main .message {
     flex: 1 1 auto;
 }
 
+.general-form{
+    margin: 50px;
+}
+
+.general-form h2{
+    text-align: center;
+}
+
 /* .signup-background{
     position: absolute;
     padding:0;
     margin:0;
-
     top:0;
     left:0;
-
     width: 100%;
     height: 100%;
     background:rgba(255,255,255,0.5);
@@ -258,6 +276,24 @@ main .message {
 
 /* edit-story styling end*/
 
+/*comment-styling*/
+
+.comment-styling{
+    border-radius: 20px;
+    border: solid 1px black;
+    width: 70%;
+    background-image: none;
+    background-color: white !important;
+}
+
+/*comment styling ends*/
+
+/*create budget container*/
+
+
+
+/*create budget ends*/
+
 /* footer style starts */
 
 footer{
@@ -267,7 +303,7 @@ footer{
     text-align: left;
     margin: 0;
     background-color: #6c757d;
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100%;
     padding: 3% 3%;

@@ -1,7 +1,4 @@
 $(function () {
-
-    
-
     $("#insertRow").on("click", function (event) {
         event.preventDefault();
 
@@ -12,7 +9,7 @@ $(function () {
         //cols += '<th scope="row">' + counter + '</th>';
         cols += '<td><input type="text" class="form-control" id="income-source" name="income-source"/>';
         cols += '<td><input type="text" class="form-control" id="income-receipt" name="income-receipt"/>';
-        cols += '<td><input type="text" class="form-control" id="income-remark" name="income-remark"/>';     
+        cols += '<td><input type="text" class="form-control" id="income-remark" name="income-remark"/>';
 
 
 
@@ -22,9 +19,9 @@ $(function () {
         newRow.append(cols);
 
         // Insert the row inside a table
-        $("#income-table").append(newRow);       
+        $("#income-table").append(newRow);
     });
-         
+
 
     $("#insertRow2").on("click", function (event) {
         event.preventDefault();
@@ -33,7 +30,7 @@ $(function () {
         var cols = '';
 
         //Expense table columns
-        
+
         cols += '<td><input type="text" class="form-control" id="expense-item" name="expense-item"/>';
         cols += '<td><input type="text" class="form-control" id="expense-payment" name="expense-payment"/>';
         cols += '<td><input type="text" class="form-control" id="expense-comment" name="expense-comment"/>';
@@ -46,9 +43,9 @@ $(function () {
         newRow2.append(cols);
 
         // Insert the row inside a table
-        $("#expense-table").append(newRow2);       
-    });  
+        $("#expense-table").append(newRow2);
+    });
 
- 
+
 });
 

@@ -70,10 +70,12 @@ router.post('/', (req, res) => {
       res.status(500).json(err);
     });
 });
+//var session_username = "";
 // user login
 router.post('/login', (req, res) => {
   // expects {email: , password: }
   User.findOne({
+    //attributes: ['id', 'username'],
     where: {
       email: req.body.email
     }
@@ -84,6 +86,7 @@ router.post('/login', (req, res) => {
     }
 
     const validPassword = dbUserData.checkPassword(req.body.password);
+    //session_username = dbUserData.username;
 
     if (!validPassword) {
       res.status(400).json({ message: 'Incorrect password!' });
@@ -155,5 +158,6 @@ router.delete('/:id', (req, res) => {
       res.status(500).json(err);
     });
 });
+
 
 module.exports = router;

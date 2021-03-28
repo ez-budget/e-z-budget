@@ -5,7 +5,7 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 // create Budget model
-class Budget extends Model {}
+class Budget extends Model { }
 
 // create fields/columns for Budget model
 Budget.init(
@@ -18,58 +18,21 @@ Budget.init(
     },
     budget_title: {
       type: DataTypes.STRING,
-      allowNull: false
-  
-      
-    },
-    income_source: {
-      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1]
       }
-    },
-    income_receipt: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        validate: {
-          len: [1]
-        }
-    },
-    income_remark: {
-        type: DataTypes.STRING,
-        allowNull: true
-        
-        
-    },
-    expense_item: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          len: [1]
-        }
-    },
-    expense_payment: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        validate: {
-        len: [1]
-        }
-    },
-    expense_comment: {
-      type: DataTypes.STRING,
-      allowNull: false
-     
-      
+
     },
     user_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'user',
-          key: 'id'
-        }
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id'
       }
+    }
   },
+
   {
     sequelize,
     freezeTableName: true,
