@@ -1,4 +1,4 @@
-function addMoney() {
+/*function addMoney() {
   var totalBudget = parseInt(document.getElementById("totalBudget").innerHTML);
   var currentBalance = parseInt(document.getElementById("currentBalance").innerHTML);
   var incomeAmount = parseInt(document.getElementById('incomeAmount').value);
@@ -68,4 +68,4 @@ function addedExpense() {
   else {
     alert("Sorry your expense amount is higher than your current balance")
   };
-};
+};*/

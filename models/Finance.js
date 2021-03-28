@@ -1,7 +1,7 @@
-const { Model, DataTypes } = require('sequelize');
+/*const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Finance extends Model { }
+//class Finance extends Model { }
 
 Finance.init(
   {
@@ -63,4 +63,4 @@ Finance.init(
   }
 );
 
-module.exports = Finance;
+module.exports = Finance;*/

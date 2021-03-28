@@ -1,4 +1,4 @@
-const router = require('express').Router();
+/*const router = require('express').Router();
 const { User, Finance } = require('../../models');
 const withAuth = require('../../utils/auth.js');
 
@@ -127,7 +127,7 @@ router.delete('/:id', withAuth, (req, res) => {
             res.status(500).json(err);
         });
 });
-module.exports = router;
+module.exports = router;*/
 
 
 

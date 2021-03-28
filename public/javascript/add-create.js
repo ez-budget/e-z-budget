@@ -1,4 +1,4 @@
-async function newCreateFormHandler(event) {
+/*async function newCreateFormHandler(event) {
     event.preventDefault();
   
     const budget_title = document.querySelector('input[name="budget-title"]').value;
@@ -51,4 +51,4 @@ function addRowIncome(event) {
     cell3.innerHTML = '<input type="text" class="form-control" id="income-remark" name="income-remark"/>'; 
 }
   */
-//document.getElementById('addRowIncome').addEventListener('click', addRowIncome);
+//document.getElementById('addRowIncome').addEventListener('click', addRowIncome);*/
