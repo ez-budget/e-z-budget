@@ -37,7 +37,7 @@ header a img{
 
 
 main{
-    padding-bottom: 250px;
+    padding-bottom: 290px;
 }
 
 
@@ -305,10 +305,14 @@ footer{
     text-align: left;
     margin: 0;
     background-color: #6c757d;
-    position: relative;
+    position: absolute;
     bottom: 0;
     width: 100%;
     padding: 3% 3%;
+}
+
+footer a{
+    color: White;
 }
 
 footer a img{
