@@ -54,7 +54,7 @@ This website requires the user to signup for an account. Once signed up, the use
 
 # Navigation
 
-
+https://github.com/ez-budget/e-z-budget/blob/feature/new-budget/public/assets/images/e-z-Budget%20for%20guest%20users.gif
 
 
 # UI Designs
