@@ -1,5 +1,5 @@
 
-
+![logo_header](https://user-images.githubusercontent.com/75186217/112775688-a0198880-900b-11eb-9fa3-9bb02eea1291.gif)
 
 # <a href="https://ez-budget10.herokuapp.com/">EZ-Budget</a>
 
@@ -43,7 +43,7 @@ This website requires the user to signup for an account. Once signed up, the use
 * Bcrypt
 
 # Status
-We are currently working on adding new features to EZ-Budget! These features include adding more charts that show your savings progress. We also plan on eventually being able to link the application to your bank acccount. This will allow the user to have their budget automated instead of having to be manual input.
+We are currently working on adding new features to EZ-Budget! These features include adding more charts that show your savings progress. We also plan on eventually being able to link the application to your bank acccount. This will allow the user to have their budget automated instead of having to manually input data.
 
 
 # Link to Webpage
