@@ -18,12 +18,13 @@
 <main>
     
     <div class="container text-center">
-        <h2>Edit my Story</h2>
+        
         <div class="row">
             <div class="col-sm-1 col-md-2 col-lg-4">
 
             </div>
-            <div class="col-sm-10 col-md-8 col-lg-4">
+            <div class="col-sm-10 col-md-8 col-lg-4 light-gradient column">
+                <h2>Edit my Story</h2>
                 <form action="" class="">
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Story Title</label>
@@ -39,7 +40,7 @@
                     <button type="button" class="btn btn-outline-danger delete-post-btn">Delete</button>
                 </form>
             </div>
-            <div class="col-sm-1 col-md-2 col-lg-4">
+            <div class="col-sm-1 col-md-2 col-lg-4 column">
                 <div>
                     <a href="/home/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment"
                         post.comments.length}}</a>

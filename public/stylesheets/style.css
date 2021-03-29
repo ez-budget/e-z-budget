@@ -11,7 +11,7 @@ body{
 }
 
 header{
-    background-color: #426D49;
+    background-image: linear-gradient(to right, rgb(96, 106, 61), rgb(66, 109, 73, 1));
 
 }
 
@@ -22,11 +22,11 @@ a{
 
 a:hover{
     text-decoration: none;
-    color: blanchedalmond;
+    color:#aaaaaa;
 }
 
 header a{
-    color:#aaaaaa;
+    color:blanchedalmond;   
 }
 
 header a img{
@@ -35,13 +35,9 @@ header a img{
     width: 50px;
 }
 
-nav{
-   display: flex;
-   justify-content: space-between;
-}
 
 main{
-    padding-bottom: 250px;
+    padding-bottom: 290px;
 }
 
 
@@ -68,19 +64,35 @@ button {
     animation: background 3s linear infinite;
   }
 
-
-
-/* landing page */
-
-.header-text-color a{
-    color: #aaaaaa;
-    background-color: #426D49; 
-    font-size: 20px;
-    font-weight: bold;
+.margin-top-bottom{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
-.header-text-color a:hover{
-    color:#aaaaaa;
+/* landing page */
+.landing-background{
+    background-image: url(../assets/images/Background1.png);
+}
+
+.landing-header-background{
+    background-image: none!important;
+}
+
+.landing-header{
+    width: 200px;
+}
+
+.landing-header a{
+    background-color: #92DE34;
+    border-radius: 30px;
+    font-weight: 600;
+    color: #025600;
+    background-size: 100% 100%;
+}
+
+.landing-header a:hover{
+    background-color: #3e8f4b;
+    animation: background 3s linear infinite;
 }
 
 .main-wrapper{
@@ -88,13 +100,14 @@ button {
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-image: url(../assets/images/Background1.png);
     /*background-size: 100% 100%; */
     object-fit:contain;
     background-repeat: no-repeat;
     height: 100vh;
     
 }
+
+
 main .login-form #email-login {
     border-radius: 30px;
 
@@ -114,7 +127,7 @@ main .login-form  #password-login {
     height: 100%;
     /* margin-top: 31%;
     margin-bottom: 30.9%; */
-    
+    z-index: 2;
 }
 
 .login-image-container{
@@ -153,6 +166,7 @@ main .login-form  #password-login {
     border-radius: 20px;
     /*border: 1px solid black; */
     width: 100%;
+    margin-top: 3rem
     /* margin: 20px;*/
 }
 
@@ -176,7 +190,7 @@ main .message {
     background-color: #dde7c0;
     background-image: linear-gradient(#dde7c0, white);
     padding: 2rem;
-    margin: 3rem;
+    /* margin: 3rem; */
     width: 100%;
 }
 
@@ -206,6 +220,14 @@ main .message {
     align-items: center;
 }
 
+.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+}
+
 /* login page styling ends */
 
 
@@ -215,6 +237,14 @@ main .message {
     position: relative;
     display: flex;
     flex: 1 1 auto;
+}
+
+.general-form{
+    margin: 50px;
+}
+
+.general-form h2{
+    text-align: center;
 }
 
 /* .signup-background{
@@ -248,6 +278,24 @@ main .message {
 
 /* edit-story styling end*/
 
+/*comment-styling*/
+
+.comment-styling{
+    border-radius: 20px;
+    border: solid 1px black;
+    width: 70%;
+    background-image: none;
+    background-color: white !important;
+}
+
+/*comment styling ends*/
+
+/*create budget container*/
+
+
+
+/*create budget ends*/
+
 /* footer style starts */
 
 footer{
@@ -261,6 +309,10 @@ footer{
     bottom: 0;
     width: 100%;
     padding: 3% 3%;
+}
+
+footer a{
+    color: White;
 }
 
 footer a img{
@@ -277,3 +329,34 @@ footer a img{
 }
 
 /* footer style ends */
+
+
+
+@media only screen and (max-width: 991px) {
+    #copyright{
+        position: relative;
+    }
+}
+
+@media only screen and (max-width: 610px) {
+    nav {
+        display: flex;
+        justify-content: center !important;
+        margin-right: 0;
+    }
+    .login-input{
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer{
+        position: relative;
+    }
+
+    .footer-center{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+     }
+}
