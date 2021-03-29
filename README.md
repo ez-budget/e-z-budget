@@ -76,5 +76,9 @@ View the video demos for [guest users](https://drive.google.com/file/d/1Qqq_uP61
 # Status
 We are currently working on adding new features to EZ-Budget! These features include adding more charts that show your savings progress. We also plan on eventually being able to link the application to your bank acccount. This will allow the user to have their budget automated instead of having to manually input data.
 
-[Project Board](https://github.com/ez-budget/e-z-budget/projects/1)
 
+View our Project Board:  
+[Project Board](https://github.com/ez-budget/e-z-budget/projects/1)
+GitHubGitHub
+ez-budget/e-z-budget
+Contribute to ez-budget/e-z-budget development by creating an account on GitHub.
