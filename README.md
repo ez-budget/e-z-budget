@@ -57,7 +57,7 @@ https://drive.google.com/file/d/1CsJUXn3Ddo98OKqi36Oc7xvCzScFyv6K/view?usp=shari
 
 # Navigation
 
-vscode-webview-resource://65fdceec-4560-4200-a065-266e7bf5fcaa/file///c%3A/Users/groll/desktop/project2/e-z-budget/public/assets/images/e-z-Budget%20for%20guest%20users.gif?version%3D1617038005126
+
 
 
 # UI Designs
