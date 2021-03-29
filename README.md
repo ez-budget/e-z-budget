@@ -47,11 +47,18 @@ This website requires the user to signup for an account. Once signed up, the use
 
 # Video Demo
 
+
+# Navigation
+
  https://drive.google.com/file/d/1Qqq_uP61hmc5OvqY91K0Qb7r88pNnMNt/view?usp=sharing
 
 
 # UI Designs
 
+![landingpage](https://user-images.githubusercontent.com/75186217/112866732-1bb91b00-9088-11eb-9363-69bdbdde489d.jpg)
+![homepage](https://user-images.githubusercontent.com/75186217/112866744-207dcf00-9088-11eb-9d00-9e465ba3621b.jpg)
+![dashboard](https://user-images.githubusercontent.com/75186217/112866755-24115600-9088-11eb-86e0-d87a2eb5f7f1.jpg)
+![Budget page](https://user-images.githubusercontent.com/75186217/112866767-2673b000-9088-11eb-9618-c82ec2fac3e3.jpg)
 
 
 # Contributors
