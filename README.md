@@ -53,11 +53,19 @@ View the video demos for [guest users](https://drive.google.com/file/d/1Qqq_uP61
 
 # Navigation
 
-Guest user navigation
+Guest User
+ - A guest user can signup for a user account
+ - Go to the homepage
+ - View the articles and comments on the published homepage
 
 ![navigation1](/public/assets/images/e-z-Budget-guest-user.gif)
 
-Login user navigation
+Logged-In User
+ - Login to reach Dashboard
+ - Create, Edit, Delete own articles
+ - Comment on existing articles
+ - Create, Edit, Delete own Budget
+ - View a list of stories and budgets created on the dashboard
 
 ![navigation2](/public/assets/images/e-z-Budget-login-user.gif)
 
