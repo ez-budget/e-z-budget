@@ -49,5 +49,5 @@ We are currently working on adding new features to EZ-Budget! These features inc
 # Link to Webpage
 [EZ-Budget](https://ez-budget10.herokuapp.com/)
 
-
+![image](https://user-images.githubusercontent.com/75186217/112775145-f5549a80-9009-11eb-8741-d300fb856a3f.png)
 ![image](https://user-images.githubusercontent.com/75186217/112775145-f5549a80-9009-11eb-8741-d300fb856a3f.png)
