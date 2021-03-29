@@ -18,6 +18,7 @@
 
 This is your go to spot for saving for that big purchase you have been dreaming of. This is a website that is designed to make saving easier. During COVID-19 our team has concluded that saving is a common problem amongst  people. We decided that it would be most effective to have an application that keeps track of your spending and saving for you.
 
+
 # Overview
 
 This website requires the user to signup for an account. Once signed up, the user is able to create both a budget and story. These can both be edited when the user is logged in. The budget feature enables the user to manually input their revenue and expenses that allows them to keep track of their finances. They are able to monitor their savings through the various graphs on the site. 
@@ -40,6 +41,7 @@ This website requires the user to signup for an account. Once signed up, the use
 * Google Charts
 * Bcrypt
 
+
 # Deployed Website
 
 [EZ-Budget](https://ez-budget10.herokuapp.com/)
@@ -48,10 +50,11 @@ This website requires the user to signup for an account. Once signed up, the use
 # Video Demo
 
  https://drive.google.com/file/d/1Qqq_uP61hmc5OvqY91K0Qb7r88pNnMNt/view?usp=sharing
+ 
 
 # Navigation
 
-
+![](https://files.slack.com/files-pri/T01EXTZCZ44-F01TEBYRBNU/e-z-budget_for_guest_users.gif)
 
 
 # UI Designs
@@ -68,6 +71,7 @@ This website requires the user to signup for an account. Once signed up, the use
 
 
 |<a href="https://github.com/cruzma" target="_blank">Mateo's Github</a>| <a href="https://github.com/rosefrancis-tech"> Rose's Github</a>|<a href="https://github.com/AChung92">Alex's Github</a>|<a href="https://github.com/Kgroll">Kristen's Github</a>|<a href="https://github.com/0726hayate">Jason's Github|
+ 
   
 # Status
 We are currently working on adding new features to EZ-Budget! These features include adding more charts that show your savings progress. We also plan on eventually being able to link the application to your bank acccount. This will allow the user to have their budget automated instead of having to manually input data.
