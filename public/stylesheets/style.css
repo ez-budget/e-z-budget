@@ -50,13 +50,14 @@ button {
     background-color: #92DE34;
     /* width: 100px;
     height: 70px; */
-    border-radius: 30px;
+    border-radius: 12px;
     /* font-size: 1.5rem; */
     font-weight: 600;
     color: #025600;
     background-size: 100% 100%;
     /* box-shadow: 0 0 0 7px #92DE34 inset; */
     /* margin-bottom: 15px; */
+    padding: 0.5rem;
   }
   
   button:hover {
@@ -109,12 +110,14 @@ button {
 
 
 main .login-form #email-login {
-    border-radius: 30px;
-
+    border-radius: 15px;
+    line-height: 2.5em;
+    background-color: #dde7c0;
 }
 main .login-form  #password-login {
-    border-radius: 30px;
-
+    border-radius: 15px;
+    line-height: 2.5em;
+    background-color: #dde7c0;
 }
 
 .login-container{
@@ -138,7 +141,10 @@ main .login-form  #password-login {
     margin-top: 2px;
     margin-bottom: 10px;
     border-radius: 50%;
-
+    
+}
+.login-input {
+    margin-bottom: 10%;
 }
 .landing-headline {
     
@@ -149,6 +155,7 @@ main .login-form  #password-login {
     max-height: 100%;
     display: block; /* remove extra space below image */
     border-radius: 50%;
+    
 }
 
 /* landing page ends */
@@ -192,6 +199,7 @@ main .message {
     padding: 2rem;
     /* margin: 3rem; */
     width: 100%;
+    box-shadow: 5px 10px 8px 0px #888888;
 }
 
 .no-bullets {
@@ -227,7 +235,10 @@ main .message {
     /* bring your own prefixes */
     transform: translate(-50%, -50%);
 }
-
+.loginpage-button {
+    
+    justify-self: center;
+}
 /* login page styling ends */
 
 
@@ -278,14 +289,22 @@ main .message {
 
 /* edit-story styling end*/
 
+/* budget-view styling begins*/
+.budget-view-title {
+    padding: 1rem;
+    margin-bottom: 5rem;
+}
+/* budget-view styling ends*/
+
 /*comment-styling*/
 
 .comment-styling{
     border-radius: 20px;
-    border: solid 1px black;
+    /*border: solid 1px black;*/
     width: 70%;
     background-image: none;
     background-color: white !important;
+    margin-bottom: 0.5rem;
 }
 
 /*comment styling ends*/
@@ -328,6 +347,9 @@ footer a img{
     bottom: 0;
 }
 
+#legal {
+    font-size: x-small;
+}
 /* footer style ends */
 
 
@@ -338,7 +360,7 @@ footer a img{
     }
 }
 
-@media only screen and (max-width: 610px) {
+@media only screen and (max-width: 775px) {
     nav {
         display: flex;
         justify-content: center !important;
