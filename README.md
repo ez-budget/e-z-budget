@@ -2,7 +2,7 @@
 * [Introduction](#Introduction)
 * [Overview](#Overview)
 * [Technologies](#Technologies)
-* [Deployed website](#Deployed Website)
+* [Deployed-website](#Deployed Website)
 * [Video Demo](#Video Demo)
 * [Navigation](#Navigation)
 * [UI Designs](#UI Designs)
