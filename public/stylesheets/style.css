@@ -289,6 +289,13 @@ main .message {
 
 /* edit-story styling end*/
 
+/* budget-view styling begins*/
+.budget-view-title {
+    padding: 1rem;
+    margin-bottom: 5rem;
+}
+/* budget-view styling ends*/
+
 /*comment-styling*/
 
 .comment-styling{

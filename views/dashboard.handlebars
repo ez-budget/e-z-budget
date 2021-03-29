@@ -33,7 +33,7 @@
                         {{#each posts as |post|}}
                         <li class="light-gradient column">
                         {{> story-info post}} 
-                        <a href="/dashboard/edit/story/{{post.id}}" class="edit-link">Edit</a>
+                        <a href="/dashboard/edit/story/{{post.id}}" class="edit-link"><i class="fas fa-edit"></i></a>
                         </li>
                         {{/each}}
                     </ul>
@@ -52,7 +52,7 @@
                         {{#each budgets as |budget|}}
                         <li class="light-gradient column">
                         {{> budget-info budget}}
-                        <a href="/dashboard/edit/budget/{{budget.id}}" class="edit-link">Edit</a>
+                        <a href="/dashboard/edit/budget/{{budget.id}}" class="edit-link"><i class="fas fa-edit"></i></a>
                         </li>
                         {{/each}}
                     </ul >
