@@ -1,3 +1,7 @@
+![logo_header](https://user-images.githubusercontent.com/75186217/112775688-a0198880-900b-11eb-9fa3-9bb02eea1291.gif)
+
+# <a href="https://ez-budget10.herokuapp.com/">EZ-Budget</a>
+
 # Table of Contents
 * [Introduction](#Introduction)
 * [Overview](#Overview)
@@ -8,15 +12,14 @@
 * [UI Designs](#UI-Designs)
 * [Contributors](#Contributors)
 * [Status](#Status)
-* [Functionality](#Functionality)
 
-![logo_header](https://user-images.githubusercontent.com/75186217/112775688-a0198880-900b-11eb-9fa3-9bb02eea1291.gif)
 
-# <a href="https://ez-budget10.herokuapp.com/">EZ-Budget</a>
+# Introduction
 
 This is your go to spot for saving for that big purchase you have been dreaming of. This is a website that is designed to make saving easier. During COVID-19 our team has concluded that saving is a common problem amongst  people. We decided that it would be most effective to have an application that keeps track of your spending and saving for you.
 
 # Overview
+
 This website requires the user to signup for an account. Once signed up, the user is able to create both a budget and story. These can both be edited when the user is logged in. The budget feature enables the user to manually input their revenue and expenses that allows them to keep track of their finances. They are able to monitor their savings through the various graphs on the site. 
 
 
@@ -41,6 +44,10 @@ This website requires the user to signup for an account. Once signed up, the use
 
 [EZ-Budget](https://ez-budget10.herokuapp.com/)
 
+
+# Video Demo
+
+ https://drive.google.com/file/d/1Qqq_uP61hmc5OvqY91K0Qb7r88pNnMNt/view?usp=sharing
 
 
 # UI Designs
