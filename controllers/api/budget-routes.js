@@ -26,7 +26,7 @@ router.get('/', (req, res) => {
          {
           model: Finance,
          attributes: ['id', 'income_source', 'income_receipt', 'income_remark',
-            'expense_item', 'expense_payment', 'expense_comment'],
+            'expense_item', 'expense_payment', 'expense_comment', 'budget_id'],
            include: {
              model: Budget,
              attributes: ['id','budget_title']
@@ -66,8 +66,8 @@ router.get('/:id', (req, res) => {
     [
        {
         model: Finance,
-       attributes: ['id', 'income_source', 'income_receipt', 'income_remark',
-         'expense_item', 'expense_payment', 'expense_comment'],
+       attributes: ['income_source', 'income_receipt', 'income_remark',
+         'expense_item', 'expense_payment', 'expense_comment', 'budget_id'],
          include: {
            model: Budget,
            attributes: ['id','budget_title']
@@ -95,6 +95,7 @@ router.get('/:id', (req, res) => {
 // create budget
 router.post('/', withAuth, (req, res) => {
   Budget.create({
+    user_id: req.body.user_id,
     budget_title: req.body.budget_title,
     //income_source: req.body.income_source,
     //income_receipt: req.body.income_receipt,
@@ -106,7 +107,7 @@ router.post('/', withAuth, (req, res) => {
     // total_expense,
     // net_income,
     // result,
-    user_id: req.body.user_id
+    
   })
     .then(dbBudgetData => res.json(dbBudgetData))
     .catch(err => {

@@ -22,7 +22,8 @@ router.get('/', (req, res) => {
           include: {
             model: Finance,
             attributes: ['id', 'income_source', 'income_receipt', 'income_remark',
-              'expense_item', 'expense_payment', 'expense_comment'],
+              'expense_item', 'expense_payment', 'expense_comment', 'budget_id' 
+            ],
           }
         },
         {
@@ -40,14 +41,14 @@ router.get('/', (req, res) => {
 
 // get budget by id
 router.get('/:id', (req, res) => {
-  Budget.findOne({
+  Finance.findOne({
     where: {
       id: req.params.id
     },
     attributes: [
-      'id',
-      'budget_title'
-      //'income_source', 'income_receipt', 'income_remark', 'expense_item', 'expense_payment', 'expense_comment'
+      //'id',
+      //'budget_title'
+      'income_source', 'income_receipt', 'income_remark', 'expense_item', 'expense_payment', 'expense_comment', 'budget_id'
       // ,
       // 'total_income',
       // 'total_expense',
@@ -57,12 +58,13 @@ router.get('/:id', (req, res) => {
     include: 
     [
        {
-        model: Finance,
-       attributes: ['id', 'income_source', 'income_receipt', 'income_remark',
-         'expense_item', 'expense_payment', 'expense_comment'],
+        model: Budget,
+        attributes: ['id','budget_title'],
+        
          include: {
-           model: Budget,
-           attributes: ['id','budget_title']
+          model: Finance,
+       attributes: ['income_source', 'income_receipt', 'income_remark',
+         'expense_item', 'expense_payment', 'expense_comment', 'budget-id'],
          }
        }, 
       {
@@ -71,12 +73,12 @@ router.get('/:id', (req, res) => {
       }       
     ]
   })
-    .then(dbBudgetData => {
-      if (!dbBudgetData) {
+    .then(dbFinanceData => {
+      if (!dbFinanceData) {
         res.status(404).json({ message: 'No budget found with this id' });
         return;
       }
-      res.json(dbBudgetData);
+      res.json(dbFinanceData);
     })
     .catch(err => {
       console.log(err);
@@ -92,7 +94,7 @@ router.post('/', withAuth, (req, res) => {
     expense_item: req.body.expense_item,
     expense_payment: req.body.expense_payment,
     expense_comment: req.body.expense_comment,
-    //budget_id: req.body.budget_id
+    budget_id: req.body.budget_id
   })
     .then(dbFinanceData => res.json(dbFinanceData))
     .catch(err => {

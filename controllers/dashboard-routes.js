@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Post, User, Comment, Budget } = require('../models');
+const { Post, User, Comment, Budget, Finance } = require('../models');
 const withAuth = require('../utils/auth');
 
 // get all story and budgets
@@ -19,6 +19,60 @@ router.get('/', withAuth, (req, res) => {
     })
     .then(dbBudgetData => {
         const budgets = dbBudgetData.map(budget => budget.get({ plain: true }));
+        Post.findAll({
+            where: {
+                user_id: req.session.user_id
+            },
+            attributes: ['id', 'story_title', 'story_body', 'created_at'],
+            include: [
+                {
+                    model: Comment,
+                    attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+                    include: {
+                        model: User,
+                        attributes: ['username']
+                    }
+                },
+                {
+                    model: User,
+                    attributes: ['username']
+                }
+            ]
+        })
+        .then(dbPostData => {
+            const posts = dbPostData.map(post => post.get({ plain: true }));
+        
+            res.render('dashboard', {posts,budgets, loggedIn: true});
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
+
+
+router.get('/', withAuth, (req, res) => {
+    Finance.findAll({
+        where: {
+            user_id: req.session.user_id
+        },
+        attributes: [ ['income_source', 'income_receipt', 'income_remark',
+        'expense_item', 'expense_payment', 'expense_comment', 'budget-id'],
+        ],
+        include: [
+            {
+                model: User,
+                attributes: ['username']
+            }
+        ]
+    })
+    .then(dbFinanceData => {
+        const finances = dbFinanceData.map(finance => finance.get({ plain: true }));
         Post.findAll({
             where: {
                 user_id: req.session.user_id
