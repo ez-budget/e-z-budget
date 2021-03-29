@@ -54,9 +54,11 @@ View the video demos for [guest users](https://drive.google.com/file/d/1Qqq_uP61
 # Navigation
 
 Guest user navigation
+
 ![navigation1](/public/assets/images/e-z-Budget-guest-user.gif)
 
 Login user navigation
+
 ![navigation2](/public/assets/images/e-z-Budget-login-user.gif)
 
 
