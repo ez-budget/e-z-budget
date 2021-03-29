@@ -1,7 +1,7 @@
 
 
 
-# <a href="Heroku Link">EZ-Budget</a>
+# <a href="https://ez-budget10.herokuapp.com/">EZ-Budget</a>
 
 This is your go to spot for saving for that big purchase you have been dreaming of. This is a website that is designed to make saving easier. During COVID-19 our team has concluded that saving is a common problem amongst  people. We decided that it would be most effective to have an application that keeps track of your spending and saving for you.
 
@@ -46,5 +46,5 @@ This website requires the user to signup for an account. Once signed up, the use
 We are currently working on adding new features to EZ-Budget! These features include adding more charts that show your savings progress. We also plan on eventually being able to link the application to your bank acccount. This will allow the user to have their budget automated instead of having to be manual input.
 
 
-# Link to webpage
+# Link to Webpage
 [EZ-Budget](https://ez-budget10.herokuapp.com/)
