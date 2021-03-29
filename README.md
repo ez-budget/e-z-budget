@@ -1,5 +1,5 @@
 
-
+![Logo_small](https://user-images.githubusercontent.com/75186217/112775630-719bad80-900b-11eb-92e6-d10841bfea51.jpg)
 
 # <a href="https://ez-budget10.herokuapp.com/">EZ-Budget</a>
 
