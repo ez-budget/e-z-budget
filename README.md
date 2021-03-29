@@ -48,11 +48,11 @@ This website requires the user to signup for an account. Once signed up, the use
 
 
 # Video Demo
-Video Demo for guest users: https://drive.google.com/file/d/1Qqq_uP61hmc5OvqY91K0Qb7r88pNnMNt/view?usp=sharing  
-Video Demo for logged in users: https://drive.google.com/file/d/1CsJUXn3Ddo98OKqi36Oc7xvCzScFyv6K/view?usp=sharing
 
+View the video demos for [guest users](https://drive.google.com/file/d/1Qqq_uP61hmc5OvqY91K0Qb7r88pNnMNt/view) and [logged in users](https://drive.google.com/file/d/1CsJUXn3Ddo98OKqi36Oc7xvCzScFyv6K/view)
 
 # Navigation
+
 ![navigation1](/public/assets/images/e-z-Budget-guest-user.gif)
 ![navigation2](/public/assets/images/e-z-Budget-login-user.gif)
 
