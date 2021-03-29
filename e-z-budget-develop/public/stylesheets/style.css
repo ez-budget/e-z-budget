@@ -1,0 +1,279 @@
+body{
+    font-family: 'Varela Round', 'Montserrat', sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+header{
+    background-color: #426D49;
+
+}
+
+a{
+    color: #98B4D4;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none;
+    color: blanchedalmond;
+}
+
+header a{
+    color:#aaaaaa;
+}
+
+header a img{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+nav{
+   display: flex;
+   justify-content: space-between;
+}
+
+main{
+    padding-bottom: 250px;
+}
+
+
+
+button {
+    /* display: block; */
+    cursor: pointer;
+    /* outline: none; */
+    /* border: none; */
+    background-color: #92DE34;
+    /* width: 100px;
+    height: 70px; */
+    border-radius: 30px;
+    /* font-size: 1.5rem; */
+    font-weight: 600;
+    color: #025600;
+    background-size: 100% 100%;
+    /* box-shadow: 0 0 0 7px #92DE34 inset; */
+    /* margin-bottom: 15px; */
+  }
+  
+  button:hover {
+    background-color: #3e8f4b;
+    animation: background 3s linear infinite;
+  }
+
+
+
+/* landing page */
+
+.header-text-color a{
+    color: #aaaaaa;
+    background-color: #426D49; 
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.header-text-color a:hover{
+    color:#aaaaaa;
+}
+
+.main-wrapper{
+    
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-image: url(../assets/images/Background1.png);
+    /*background-size: 100% 100%; */
+    object-fit:contain;
+    background-repeat: no-repeat;
+    height: 100vh;
+    
+}
+main .login-form #email-login {
+    border-radius: 30px;
+
+}
+main .login-form  #password-login {
+    border-radius: 30px;
+
+}
+
+.login-container{
+    
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    /* margin-top: 31%;
+    margin-bottom: 30.9%; */
+    
+}
+
+.login-image-container{
+
+    height: 150px;  
+    width: 150px;
+    /*border: 2px solid black;*/
+    margin-top: 2px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+
+}
+.landing-headline {
+    
+    color: #426D49;
+}
+.login-image-container img{
+    max-width: 100%;
+    max-height: 100%;
+    display: block; /* remove extra space below image */
+    border-radius: 50%;
+}
+
+/* landing page ends */
+
+/* homepage */
+.jumbotron-background{
+    background-image: url(../assets/images/money-growing.jpg);
+    color: #426D49;
+    margin: 0;
+}
+
+.column{
+    /*background-color: rgba(104, 148, 104, 0.7);*/
+    padding: 20px;
+    border-radius: 20px;
+    /*border: 1px solid black; */
+    width: 100%;
+    /* margin: 20px;*/
+}
+
+.column a{
+    color: #426D49;
+}
+
+.column a:hover{
+    color:#8fb427;
+}
+
+main .message {
+    background-color: #8fb427;
+    background-image: linear-gradient(#8fb427, white);
+    padding: 0;
+    margin: 0;
+    width: fit-content;
+}
+
+.light-gradient {
+    background-color: #dde7c0;
+    background-image: linear-gradient(#dde7c0, white);
+    padding: 2rem;
+    margin: 3rem;
+    width: 100%;
+}
+
+.no-bullets {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margins */
+    width:fit-content;
+}
+
+.post-list {
+    padding: 0;
+    margin:0;
+
+}
+/* hompage ends */
+
+/* login page */
+.login-header{
+    display: flex;
+    justify-content: center;
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* login page styling ends */
+
+
+/* signup page syling begins*/
+
+.signup-main{
+    position: relative;
+    display: flex;
+    flex: 1 1 auto;
+}
+
+/* .signup-background{
+    position: absolute;
+    padding:0;
+    margin:0;
+
+    top:0;
+    left:0;
+
+    width: 100%;
+    height: 100%;
+    background:rgba(255,255,255,0.5);
+} */
+
+/* signup page ends */
+
+
+
+/*edit-story styling begins*/
+
+.edit-story-container{
+    background-color: #426D49;
+    margin-top: 30px;
+    padding: 20px;
+    box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+
+}
+
+
+
+/* edit-story styling end*/
+
+/* footer style starts */
+
+footer{
+    clear: both;
+    border: 1px groove #aaaaaa;
+    color: White;
+    text-align: left;
+    margin: 0;
+    background-color: #6c757d;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 3% 3%;
+}
+
+footer a img{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+
+#copyright {
+    font-size: 75%;
+    position: absolute;
+    bottom: 0;
+}
+
+/* footer style ends */

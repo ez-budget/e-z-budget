@@ -1,0 +1,68 @@
+<header>
+    <nav class="navbar navbar-expand-sm justify-content-between">
+        <a class="navbar-brand" href="/home"> <img src="/assets/images/logo_header.gif" alt="logo"> </a>
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link" href="/home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/dashboard/addbudget">Create a budget</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/dashboard/addstory">Share My Story</a>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link" id="logout">Logout</button>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <div class="container-fluid">
+        <div class="text-center">
+            <p class="message">Hello User!</p>
+        </div>
+        <div class="container">
+            <div class="row justify-content-around">
+                <div class="col-sm-3 col-md-6 col-lg-6 opacity-1 column">
+                    <!-- story lists -->
+                    <h2>My stories</h2>
+                    {{#if posts.length}}
+                    <section>
+                    <ul class= "no-bullets">
+                        {{#each posts as |post|}}
+                        <li class="light-gradient column">
+                        {{> story-info post}} 
+                        <a href="/dashboard/edit/story/{{post.id}}" class="edit-link">Edit</a>
+                        </li>
+                        {{/each}}
+                    </ul>
+                    </section>
+                    {{else}}
+                    <p>No stories yet!</p>
+                    {{/if}}
+                </div>
+                <div class="col-sm-9 col-md-6 col-lg-6 opacity-1 column">
+                    <!-- budget lists -->
+                    
+                    {{#if budgets.length}}
+                    <section>
+                    <ul class= "no-bullets ">
+                        <h2>My Budgets</h2>
+                        {{#each budgets as |budget|}}
+                        <li class="light-gradient column">
+                        {{> budget-info budget}}
+                        <a href="/dashboard/edit/budget/{{budget.id}}" class="edit-link">Edit</a>
+                        </li>
+                        {{/each}}
+                    </ul >
+                    </section>
+                    {{else}}
+                    <p>No budgets created!</p>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<script src="/javascript/logout.js"></script>
