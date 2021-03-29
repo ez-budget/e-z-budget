@@ -54,7 +54,7 @@ This website requires the user to signup for an account. Once signed up, the use
 
 # Navigation
 
-![](https://files.slack.com/files-pri/T01EXTZCZ44-F01TEBYRBNU/e-z-budget_for_guest_users.gif)
+
 
 
 # UI Designs
